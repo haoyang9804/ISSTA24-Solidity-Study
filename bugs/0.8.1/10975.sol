@@ -1,0 +1,1 @@
+contract C{function f() {assembly{function f() {} f := 1}}}
