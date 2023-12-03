@@ -1,0 +1,21 @@
+bugs/0.4.17/solc-static-linux queue/id:011825,src:000232,op:havoc,rep:4 > hang
+bugs/0.4.17/solc-static-linux queue/id:012098,src:000264,op:havoc,rep:128 > hang
+bugs/0.4.19/solc-static-linux queue/id:011825,src:000232,op:havoc,rep:4 > hang
+bugs/0.4.19/solc-static-linux queue/id:012098,src:000264,op:havoc,rep:128 > hang
+bugs/0.4.20/solc-static-linux queue/id:007543,src:000002,op:havoc,rep:32,+cov 0
+bugs/0.4.20/solc-static-linux queue/id:011825,src:000232,op:havoc,rep:4 > hang
+bugs/0.4.20/solc-static-linux queue/id:012098,src:000264,op:havoc,rep:128 > hang
+bugs/0.4.21/solc-static-linux queue/id:011825,src:000232,op:havoc,rep:4 > hang
+bugs/0.4.21/solc-static-linux queue/id:012098,src:000264,op:havoc,rep:128 > hang
+bugs/0.4.23/solc-static-linux queue/id:011825,src:000232,op:havoc,rep:4 > hang
+bugs/0.4.23/solc-static-linux queue/id:012098,src:000264,op:havoc,rep:128 > hang
+bugs/0.4.23/solc-static-linux queue/id:016240,src:001848,op:havoc,rep:4 0
+bugs/0.4.24/solc-static-linux queue/id:011825,src:000232,op:havoc,rep:4 > hang
+bugs/0.4.24/solc-static-linux queue/id:012098,src:000264,op:havoc,rep:128 > hang
+bugs/0.5.0/solc-static-linux queue/id:012239,src:000271,op:havoc,rep:16 2
+bugs/0.6.3/solc-static-linux queue/id:007746,src:000002,op:havoc,rep:32,+cov 0
+bugs/0.7.5/solc-static-linux queue/id:008964,src:000028,op:havoc,rep:32,+cov 0
+bugs/0.7.5/solc-static-linux queue/id:008964,src:000028,op:havoc,rep:32,+cov 1
+bugs/0.7.5/solc-static-linux queue/id:008964,src:000028,op:havoc,rep:32,+cov 5
+bugs/0.8.0/solc-static-linux queue/id:009963,src:000055,op:havoc,rep:4 2
+bugs/0.8.9/solc-static-linux queue/id:010847,src:000102,op:havoc,rep:32,+cov 0
