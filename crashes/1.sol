@@ -1,5 +1,5 @@
 contract C {
-    function f0() public { (()) = 2; }
+    // function f0() public { (()) = 2; }
 
     function f1() public pure { (!()) = (); }
 
