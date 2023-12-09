@@ -1,4 +1,6 @@
-# Solidity Compiler Fuzzer Benchmark
+# Evaluation of Solidity Compiler Fuzzers
+
+## Solidity Compiler Fuzzer Benchmark
 
 This benchmark includes 109 historical Solidity compiler bugs distributed over 39 different versions, which are all included in `bugs` folder.
 
@@ -48,3 +50,13 @@ afl/afl-fuzz -m 10240 -t 2000 -i test_cases/ -o fuzzer_reports solidity/build/te
 ```
 
 The fuzzing results are stored in directory `fuzzer_reports`
+
+## Experimental Results
+
+Folders `AFL-compiler-fuzzer` and `solfuzzer` contain their fuzzing results separately in 20-day execution.
+
+Bug-triggered test cases for crashes found by `AFL-compiler-fuzzer` on the latest version of Solidity compiler are stored in `AFL-compiler-fuzzer/crashes`.
+After [discussing](https://github.com/ethereum/solidity/issues/14719#issuecomment-1842628879) with a developer of Solidity compiler, it's confirmed that these ten crashes are the same bug.
+
+The two folders all include `fuzzer_stats` and `plot_data`.
+`fuzzer_stats` contains the fuzzing summary and `plot_data` is the chronological record of the fuzzing process. 
