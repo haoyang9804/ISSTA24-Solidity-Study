@@ -1,4 +1,8 @@
-# Evaluation of Solidity Compiler Fuzzers
+# README
+
+## Bugs Classification
+
+Please refer to [Solidity Compiler Bugs.pdf](./Solidity%20Compiler%20Bugs.pdf)
 
 ## Solidity Compiler Fuzzer Benchmark
 
