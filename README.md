@@ -23,23 +23,17 @@ Here is the summary:
 
 To replicate this evaluation, you can download a [docker image](https://hub.docker.com/repository/docker/mhypony/sol-fuzzer-benchmark/general) and create a container from it.
 
-Inside this container, `AFLs` folder is all you need to execute AFL-compiler-fuzzer and solfuzzer.
+Inside this container, `AFLs` folder is all you need to execute AFL-compiler-fuzzer, solfuzzer, and Fuzzol.
 
-So please first go into it.
+So please first enter it: `cd AFLs`
 
-```
-cd AFLs
-```
-
-Specifically, `seed/files` include all test cases for `AFL-compiler-fuzzer` and `comby-decomposer/templates` and `comby-decomposer/fragments` include all templates and fragments.
-
-To start the server required by the splice-mutation mode of AFL-compiler-fuzzer, please first
+afl-compiler-fuzzer supports the use of comby-decomposer to splice up collected code templates and fragments. To obtain these fragment, please first
 
 ```
 cd comby-decomposer
 ```
 
-, and then use tmux
+, and then use tmux to launch the server
 
 ```
 tmux new -s server
@@ -47,30 +41,42 @@ export NODE_OPTIONS="--max-old-space-size=8192"
 node server.js --generate 1.0
 ```
 
-, and close the tmux terminal with `ctrl + B + D`
+, and close the tmux terminal with `ctrl + B + D`.
 
-Then, go back to the original directory, open a new tmux terminal by
+Then, go into afl-compiler-fuzzer folder by `cd afl-compiler-fuzzer` and `sudo make install`.
+
+Finally, go back to `~/AFLs`, and run
 
 ```
-cd ..
-tmux new -s afl
-afl-compiler-fuzzer/afl-fuzz-compiler -2 25 -1 75 -m 10240 -i seed/files/ -o findings/ solidity/build/solc/solc @@
+afl-fuzz-compiler -2 25 -1 75 -m 10240 -i acf-seeds -o findings/ solidity/build-acf/solc/solc @@
 ```
 
 The fuzzing results are stored in directory `findings`
 
 To run solfuzzer,
 
+First drop by afl folder `cd afl` and `sudo make install`, then
+
 ```
-tmux new -s solfuzzer
-afl/afl-fuzz -m 10240 -t 2000 -i test_cases/ -o fuzzer_reports solidity/build/test/tools/solfuzzer
+afl-fuzz -m 10240 -t 2000 -i solfuzzer-seeds -o findings solidity/build-solfuzzer/test/tools/solfuzzer
 ```
 
-The fuzzing results are stored in directory `fuzzer_reports`
+The fuzzing results are stored in directory `findings`
+
+To run Fuzzol, conduct these commands in `~/AFLs`
+
+```
+cd Fuzzol
+sudo make install
+cd ..
+afl-fuzz -m 10240 -i fuzzol-seeds -o findings solidity/build-fuzzol/solc/solc @@
+```
+
+For all these three execution, the experimental results are all located in `~/AFLs/findings`, your can change `findings` to other names in the above execution commands.
 
 ## Experimental Results
 
-Folders `AFL-compiler-fuzzer` and `solfuzzer` contain their fuzzing results separately in 20-day execution.
+Folders `AFL-compiler-fuzzer`, `solfuzzer`, and `Fuzzol` contain their fuzzing results separately in 20-day execution.
 
 Bug-triggered test cases for crashes found by `AFL-compiler-fuzzer` on the latest version of Solidity compiler are stored in `AFL-compiler-fuzzer/crashes`.
 After [discussing](https://github.com/ethereum/solidity/issues/14719#issuecomment-1842628879) with a developer of Solidity compiler, it's confirmed that these ten crashes are the same bug.
