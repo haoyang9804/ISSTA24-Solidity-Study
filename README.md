@@ -51,8 +51,6 @@ Finally, go back to `~/AFLs`, and run
 afl-fuzz-compiler -2 25 -1 75 -m 10240 -i acf-seeds -o findings/ solidity/build-acf/solc/solc @@
 ```
 
-The fuzzing results are stored in directory `findings`
-
 To run solfuzzer,
 
 First drop by afl folder `cd afl` and `sudo make install`, then
@@ -60,8 +58,6 @@ First drop by afl folder `cd afl` and `sudo make install`, then
 ```
 afl-fuzz -m 10240 -t 2000 -i solfuzzer-seeds -o findings solidity/build-solfuzzer/test/tools/solfuzzer
 ```
-
-The fuzzing results are stored in directory `findings`
 
 To run Fuzzol, conduct these commands in `~/AFLs`
 
