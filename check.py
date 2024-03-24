@@ -35,16 +35,14 @@ def traverse_sol_files(folder):
                 sol_files.append(os.path.join(root, file))
     return sol_files
 
-# Specify the folder path
+# Specify the path of the benchmark
 folder_path = "bugs"
 
 err_message = error_message(folder_path)
-print(err_message['0.4.20'])
 try:
     errm = subprocess.run(['bugs/0.4.20/solc-static-linux', 'queue/id:007543,src:000002,op:havoc,rep:32,+cov'], check=True, capture_output=True)
 except subprocess.CalledProcessError as e:
     x = [e.stderr.decode('utf-8')]
-    print(x[0])
     for m in err_message['0.4.20']:
         print(m)
         print(m == x[0])
