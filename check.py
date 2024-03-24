@@ -1,12 +1,14 @@
 import os
 import time
 import subprocess
+import csv
 
 cnt = 0
 
 def error_message(folder):
     global cnt
     message = {}
+    bugid = {}
     for version in os.listdir(folder):
         path = os.path.join(folder, version)
         solpath = os.path.join(path, 'solc-static-linux')
@@ -17,14 +19,13 @@ def error_message(folder):
                     res = subprocess.run([solpath, program_path], check=True, capture_output=True)
                 except subprocess.CalledProcessError as e:
                     cnt += 1
-                    #print(version)
-                    #print(e.stderr)
-                    #print('=====')
                     if version not in message:
                         message[version] = [e.stderr.decode('utf-8')]
+                        bugid[version] = [file]
                     else:
                         message[version].append(e.stderr.decode('utf-8'))
-    return message
+                        bugid[version].append(file)
+    return message, bugid
         
 
 def traverse_sol_files(folder):
@@ -36,24 +37,28 @@ def traverse_sol_files(folder):
     return sol_files
 
 # Specify the path of the benchmark
-folder_path = "bugs"
+folder_path = "benchmark"
 
-err_message = error_message(folder_path)
-try:
-    errm = subprocess.run(['bugs/0.4.20/solc-static-linux', 'queue/id:007543,src:000002,op:havoc,rep:32,+cov'], check=True, capture_output=True)
-except subprocess.CalledProcessError as e:
-    x = [e.stderr.decode('utf-8')]
-    for m in err_message['0.4.20']:
-        print(m)
-        print(m == x[0])
-#time.sleep(10)
+err_message, bugid = error_message(folder_path)
+
 print(f'There are {cnt} error messages')
+
+def analyze_csv():
+    id2symptom_rootcause = {}
+    with open('Solidity Compiler Bugs.csv', 'r') as file:
+        # Create a CSV reader object
+        reader = csv.reader(file)
+    
+        # Iterate over each row in the CSV file
+        for row in reader:
+            # Access the data in each column of the row
+            id2symptom_rootcause[row[9]] = (row[2], row[3])
+    return id2symptom_rootcause
+
+id2symptom_rootcause = analyze_csv()
+
 # Traverse the folder and get all Solidity files
 solidity_files = traverse_sol_files(folder_path)
-
-# Print the paths of all Solidity files
-#for file_path in solidity_files:
-#    print(file_path)
 
 def traverse_files(folder):
     file_list = []
@@ -73,12 +78,13 @@ all_files = traverse_files(folder_path)
 #for file_path in all_files:
 #    print(file_path)
 s = set()
-f = open('bugs2.txt', 'w')
+f = open('bugs.txt', 'w')
 def run_program(solpath, program_path):
     try:
         subprocess.run([solpath, program_path], check=True, capture_output=True, timeout = 3)
     except subprocess.TimeoutExpired:
-        f.write(solpath + " " + program_path + " > hang\n")
+        # f.write(solpath + " " + program_path + " > hang\n")
+        pass
     except subprocess.CalledProcessError as e:
         try:
             error = e.stderr.decode('utf-8')
@@ -88,14 +94,13 @@ def run_program(solpath, program_path):
                 text = [e.stderr.decode('utf-8')]
                 name = version + str(cnt)
                 if name not in s and  m == text[0]:
-                    f.write(solpath + " " + program_path + " " + str(cnt) + '\n')
+                    f.write(solpath + " " + program_path + " " + bugid[version][cnt] + " " + str(id2symptom_rootcause[bugid[version][cnt][:-4]]) + '\n')
                     s.add(name)
                 cnt = cnt + 1
-        except:
-            pass
+        except Exception as e:
+            print('>> error in writing in to bugs.txt for a crash: ', e)
 
 for sol in solidity_files:
     for code in all_files:
-        #print(sol, code)
         run_program(sol, code)
 f.close()
