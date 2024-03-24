@@ -1,0 +1,624 @@
+Bugs,Fix ,Symptom,Root Cause,Component,Explanation - Symptom,Explanation - Root Cause,What factors are contained in the bug-triggered test program?,Has Test Program?,Bug ID,Trigger Bug,Impact,Bug ID text
+https://github.com/ethereum/solidity/issues/14375,https://github.com/ethereum/solidity/pull/14377,Incorrect Output,Formal Verification Error,Formal Verification,SMT-LIB Script,Incorrect Model Checker Implementation,"1. CL
+2. play with numerical value",1,14375,,,14375
+https://github.com/ethereum/solidity/issues/14259,https://github.com/ethereum/solidity/pull/14262,Incorrect Output,Syntactic Analysis Error,CLI,Helper Message,,1. CL,1,14259,,"Low Impact
+Low Effort",14259
+https://github.com/ethereum/solidity/issues/14241,https://github.com/ethereum/solidity/pull/14243,Performance Issue,Optimization Error,CodeGen,,Redundant Yul Opt,NO TEST PROGRAM,0,14241,,"Medium Impact
+Low Effect",14241
+https://github.com/ethereum/solidity/issues/14211,https://github.com/ethereum/solidity/pull/14216,Incorrect Output,Formal Verification Error,Formal Verification,Warning Message,Incorrect Model Checker Implementation,"1. CL
+2. play with numerical value",1,14211,,,14211
+https://github.com/ethereum/solidity/issues/14182,https://github.com/ethereum/solidity/pull/14276,Crash,Semantic Analysis Error,Formal Verification,Reject Valid Program,Scope,"1. language feature (memory, array, struct, public, pure, external)
+",1,14182,,,14182
+https://github.com/ethereum/solidity/issues/14181,https://github.com/ethereum/solidity/pull/14344,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,bug,1,14181,,,14181
+https://github.com/ethereum/solidity/issues/14111,https://github.com/ethereum/solidity/pull/14269,Error Omission,Formal Verification Error,Formal Verification,,Incorrect Model Checker Implementation,"1. SMT enabler
+2. play with numerical value
+3. language feature (public)",1,14111,,,14111
+https://github.com/ethereum/solidity/issues/14037,https://github.com/ethereum/solidity/pull/14322,Crash,Memory-Related Error,Yul,Reject Valid Program,Allocation Problem,yul,1,14037,yul,,14037
+https://github.com/ethereum/solidity/issues/14016,https://github.com/ethereum/solidity/pull/14135,Crash,Syntactic Analysis Error,Parser,Poor Error Message,,1. invalid code,1,14016,,"Low Impact
+Low Effort",14016
+https://github.com/ethereum/solidity/issues/14001,https://github.com/ethereum/solidity/pull/14032,Crash,Memory-Related Error,Code Analyzer,Poor Error Message,Null Pointer Dereference,int8,1,14001,,"Low Impact
+Low Effort",14001
+https://github.com/ethereum/solidity/issues/13945,https://github.com/ethereum/solidity/pull/13952,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,1.annotation (@custom:smtchecker abstract-function-nondet),1,13945,,Low Effort,13945
+https://github.com/ethereum/solidity/issues/13824,https://github.com/ethereum/solidity/pull/13971,Incorrect Output,Exception Handling Error,Code Analyzer,Error message,Misleading Error Message,"1. metamorphic relation
+2. abstract contract",1,13824,,"Low Impact
+Low Effort",13824
+https://github.com/ethereum/solidity/issues/13769,https://github.com/ethereum/solidity/pull/14304,Error Omission,Exception Handling Error,"Code Analyzer
+CodeGen",,"The original specification about the initialization of immutable variables
+is not well-designed and is modified in the patch.",1. `immutable` keyword,1,13769,,"Medium Impact
+Low Effect",13769
+https://github.com/ethereum/solidity/issues/13765,https://github.com/ethereum/solidity/pull/13855,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,Scope,"1. language feature (library, external)
+3. metamorphic relation",1,13765,,"Low Impact
+Low Effort",13765
+https://github.com/ethereum/solidity/issues/13764,https://github.com/ethereum/solidity/pull/13860,Error Omission,Semantic Analysis Error,Code Analyzer,,Scope,"1. language feature (library)
+2. metamorphic relation",1,13764,,"Medium Impact
+Low Effect",13764
+https://github.com/ethereum/solidity/issues/13735,https://github.com/ethereum/solidity/pull/13761,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"1. SMT enabler
+2. language feature (mapping)",1,13735,array,,13735
+https://github.com/ethereum/solidity/issues/13732,https://github.com/ethereum/solidity/pull/13751,Crash,Exception Handling Error,Formal Verification,Reject Valid Program,,"1. annotation (@custom:smtchecker b; @custom:smtchecker)
+2. SMT enabler
+3. language feature (internal)",1,13732,,,13732
+https://github.com/ethereum/solidity/issues/13681,https://github.com/ethereum/solidity/pull/13816,Error Omission,Syntactic Analysis Error,Parser,,,"1. invalid code
+2. language feature (event)",1,13681,,"Low Impact
+Low Effort",13681
+https://github.com/ethereum/solidity/issues/13680,https://github.com/ethereum/solidity/pull/13964,Incorrect Output,Optimization Error,CodeGen,ByteCode,,1. assembly,1,13680,yul,"Low Impact
+Low Effort",13680
+https://github.com/ethereum/solidity/issues/13628,https://github.com/ethereum/solidity/pull/13629,Incorrect Output,Exception Handling Error,Interface,ByteCode,missing type checking,1. CL,1,13628,,,13628
+https://github.com/ethereum/solidity/issues/13477,https://github.com/ethereum/solidity/pull/13749,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,"1. SMT enabler
+2. language feature (library internal)",1,13477,,"Medium Impact
+Low Effort",13477
+https://github.com/ethereum/solidity/issues/13432,https://github.com/ethereum/solidity/pull/13762,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"1. language feature (struct delete)
+2. SMT enabler",1,13432,,,13432
+https://github.com/ethereum/solidity/issues/13366,https://github.com/ethereum/solidity/pull/13367,Crash,Semantic Analysis Error,Formal Verification,Poor Error Message,missing type checking,"1. invalid code
+2. tuple",1,13366,,,13366
+https://github.com/ethereum/solidity/issues/13266,https://github.com/ethereum/solidity/pull/13280,Crash,Memory-Related Error,Code Analyzer,Segfault,Null Pointer Dereference,keyword: memory,1,13266,,,13266
+https://github.com/ethereum/solidity/issues/13259,https://github.com/ethereum/solidity/pull/13406,Crash,Memory-Related Error,CodeGen,Reject Valid Program,Access the slot of mapping var,yul: mstore,1,13259,yul,,13259
+https://github.com/ethereum/solidity/issues/13249,https://github.com/ethereum/solidity/pull/13282,Incorrect Output,Memory-Related Error,CodeGen,encoding,Memory Copy,"dynamic array
+keyword: calldata",1,13249,,,13249
+https://github.com/ethereum/solidity/issues/13208,https://github.com/ethereum/solidity/pull/13279,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,tuple,1,13208,,,13208
+https://github.com/ethereum/solidity/issues/13101,https://github.com/ethereum/solidity/pull/13299,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,"1. abi encoder
+2. event
+3. error",1,13101,,,13101
+https://github.com/ethereum/solidity/issues/13039,https://github.com/ethereum/solidity/pull/13040,Error Omission,Optimization Error,Yul,,,1. assembly,1,13039,yul,,13039
+https://github.com/ethereum/solidity/issues/12998,https://github.com/ethereum/solidity/pull/13000,Crash,Exception Handling Error,Formal Verification,Reject Valid Program,Misleading Error Message,NO TEST PROGRAM,0,12998,,,12998
+https://github.com/ethereum/solidity/issues/12973,https://github.com/ethereum/solidity/pull/13754,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,NO TEST PROGRAM,0,12973,member,,12973
+https://github.com/ethereum/solidity/issues/12953,https://github.com/ethereum/solidity/pull/12966,Crash,Semantic Analysis Error,Interface,Poor Error Message,Incorrect Model Checker Implementation,"1. mapping
+2.  int256",1,12953,mapping,,12953
+https://github.com/ethereum/solidity/issues/12880,https://github.com/ethereum/solidity/pull/13001,Incorrect Output,Code Generation Error,CodeGen,encoding,,"1. event emit
+2. metamorphic relation",1,12880,ABI,,12880
+https://github.com/ethereum/solidity/issues/12860,https://github.com/ethereum/solidity/pull/12861,Error Omission,Code Generation Error,evmasm,,,1. assembly,1,12860,yul,,12860
+https://github.com/ethereum/solidity/issues/12780,https://github.com/ethereum/solidity/pull/12781,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,AST Visitor,1. function overload,1,12780,,,12780
+https://github.com/ethereum/solidity/issues/12776,https://github.com/ethereum/solidity/pull/12779,Incorrect Output,Exception Handling Error,Code Analyzer,encoding,Poor Error Message,"1. external
+2. abi encoder",1,12776,,,12776
+https://github.com/ethereum/solidity/issues/12738,https://github.com/ethereum/solidity/pull/12748,Incorrect Output,Optimization Error,"evmasm
+Yul
+Codegen",ByteCode,,"1. bytes
+2. memory",0,12738,,,12738
+https://github.com/ethereum/solidity/issues/12718,https://github.com/ethereum/solidity/pull/12750,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,incorrect type checking,"1. memory
+2. abi encoder",1,12718,,,12718
+https://github.com/ethereum/solidity/issues/12615,https://github.com/ethereum/solidity/pull/12616,Error Omission,Semantic Analysis Error,Code Analyzer,,OOP,1. class inheritance,1,12615,,,12615
+https://github.com/ethereum/solidity/issues/12600,https://github.com/ethereum/solidity/pull/13118,Incorrect Output,Memory-Related Error,CodeGen,Value(s) of Variable(s),Memory Copy,yul: mstore,1,12600,yul,,12600
+https://github.com/ethereum/solidity/issues/12558,https://github.com/ethereum/solidity/pull/12579,Crash,Memory-Related Error,CodeGen,Reject Valid Program,Memory Copy,keyword: memory,1,12558,,,12558
+https://github.com/ethereum/solidity/issues/12546,https://github.com/ethereum/solidity/pull/12553,Crash,Memory-Related Error,CodeGen,Reject Valid Program,Memory Copy,dynamic array,1,12546,,,12546
+https://github.com/ethereum/solidity/issues/12535,https://github.com/ethereum/solidity/pull/12605,Incorrect Output,Code Generation Error,CodeGen,Emitted Event,,"1. event emit
+2. bytes",1,12535,IR,,12535
+https://github.com/ethereum/solidity/issues/12528,https://github.com/ethereum/solidity/pull/12544,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,1. override,1,12528,,,12528
+https://github.com/ethereum/solidity/issues/12505,https://github.com/ethereum/solidity/pull/12520,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,1. use of undefined construct,1,12505,,,12505
+https://github.com/ethereum/solidity/issues/12406,https://github.com/ethereum/solidity/pull/12801,Hang,Optimization Error,evmasm,,,"1. Large Contract
+2. CL",1,12406,,,12406
+https://github.com/ethereum/solidity/issues/12379,https://github.com/ethereum/solidity/pull/12523,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,"1. class inheritance
+2. immutable",1,12379,,,12379
+https://github.com/ethereum/solidity/issues/12222,https://github.com/ethereum/solidity/pull/12227,Crash,Exception Handling Error,Formal Verification,Reject Valid Program,Unnecessary Error Reporting,"1. SMT enabler
+2. library, tuple",1,12222,,,12222
+https://github.com/ethereum/solidity/issues/12159,https://github.com/ethereum/solidity/pull/12186,Crash,Memory-Related Error,Code Analyzer,Reject Valid Program,storage size,large static array,1,12159,,,12159
+https://github.com/ethereum/solidity/issues/12158,https://github.com/ethereum/solidity/pull/12139,Crash,Semantic Analysis Error,Yul,Reject Valid Program,Scope,"1. external,
+2. assembly",1,12158,yul,,12158
+https://github.com/ethereum/solidity/issues/12068,https://github.com/ethereum/solidity/pull/12123,Incorrect Output,Code Generation Error,CodeGen,Warning Message,No specification about codegen an empty switch,NO TEST PROGRAM,0,12068,yul,,12068
+https://github.com/ethereum/solidity/issues/12066,https://github.com/ethereum/solidity/pull/12094,Crash,Exception Handling Error,AST,Poor Error Message,Incorrect Error Reporting,"1. typedef, mapping, library",1,12066,,,12066
+https://github.com/ethereum/solidity/issues/12065,https://github.com/ethereum/solidity/pull/12193,Crash,Yul Analysis Error,Yul,Reject Valid Program,Incorrect Source Location,"yul
+annotation",1,12065,yul,,12065
+https://github.com/ethereum/solidity/issues/12061,https://github.com/ethereum/solidity/pull/12212,Error Omission,Code Generation Error,CodeGen,,,"1. modifier, external",1,12061,IR,,12061
+https://github.com/ethereum/solidity/issues/11955,https://github.com/ethereum/solidity/pull/11956,Crash,Type System Error,AST,Reject Valid Program,,1. metamorphic relation,1,11955,,,11955
+https://github.com/ethereum/solidity/issues/11929,https://github.com/ethereum/solidity/pull/11930,Crash,Memory-Related Error,CodeGen,Reject Valid Program,calldata,"yul
+calldata",1,11929,,,11929
+https://github.com/ethereum/solidity/issues/11885,https://github.com/ethereum/solidity/pull/11906,Incorrect Output,Formal Verification Error,Formal Verification,Warning Message,Incorrect Model Checker Implementation,"1. external, payable",1,11885,,,11885
+https://github.com/ethereum/solidity/issues/11878,https://github.com/ethereum/solidity/pull/11887,Crash,Exception Handling Error,Error Handling,Reject Valid Program,Incorrect Error Handling Implementation,,1,11878,several files,,11878
+https://github.com/ethereum/solidity/issues/11855,https://github.com/ethereum/solidity/pull/11881,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,multiple import,1,11855,several files,,11855
+https://github.com/ethereum/solidity/issues/11736,https://github.com/ethereum/solidity/pull/11737,Incorrect Output,Code Generation Error,Yul,Value(s) of Variable(s),,NO TEST PROGRAM,0,11736,IR,,11736
+https://github.com/ethereum/solidity/issues/11734,https://github.com/ethereum/solidity/pull/11735,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,"1. assembly
+2. CL
+3. name shadowing",1,11734,yul,,11734
+https://github.com/ethereum/solidity/issues/11710,https://github.com/ethereum/solidity/pull/11852,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,"library, internal",1,11710,,,11710
+https://github.com/ethereum/solidity/issues/11708,https://github.com/ethereum/solidity/pull/11717,Incorrect Output,Optimization Error,CLI,ByteCode,Optimization Error for yul contracts,yul,1,11708,yul,,11708
+https://github.com/ethereum/solidity/issues/11677,https://github.com/ethereum/solidity/pull/12565,Crash,Type System Error,CodeGen,Reject Valid Program,Incorrect Type Conversion,"calldata, external, pure, bytes, memory",1,11677,conversion,,11677
+https://github.com/ethereum/solidity/issues/11631,https://github.com/ethereum/solidity/pull/11632,Crash,Semantic Analysis Error,CodeGen,Reject Valid Program,Scope,"1. unchecked
+2. type()",1,11631,,,11631
+https://github.com/ethereum/solidity/issues/11611,https://github.com/ethereum/solidity/pull/12557,Crash,Memory-Related Error,CodeGen,Reject Valid Program,Stack Pop Problem,,1,11611,,,11611
+https://github.com/ethereum/solidity/issues/11610,https://github.com/ethereum/solidity/pull/12275,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Type,"1. CL
+2. calldata",1,11610,,,11610
+https://github.com/ethereum/solidity/issues/11557,https://github.com/ethereum/solidity/pull/11577/files,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,"modifer, interface",1,11557,incorrect type combination,,11557
+https://github.com/ethereum/solidity/issues/11553,https://github.com/ethereum/solidity/pull/11641,Incorrect Output,Read-write Error,CLI,Metadata Output,CL reading,empty contract,1,11553,,,11553
+https://github.com/ethereum/solidity/issues/11552,https://github.com/ethereum/solidity/pull/11544,Crash,Read-write Error,CLI,Poor Error Message,,1. CL,1,11552,,,11552
+https://github.com/ethereum/solidity/issues/11526,https://github.com/ethereum/solidity/pull/11580,Crash,Code Generation Error,CodeGen,Reject Valid Program,,"big constant, bitwise negation",1,11526,AST->bytecode,,11526
+https://github.com/ethereum/solidity/issues/11524,https://github.com/ethereum/solidity/pull/11575,Crash,Code Generation Error,CodeGen,Reject Valid Program,The trivial implementation is about string escape.,assembly,1,11524,yul,,11524
+https://github.com/ethereum/solidity/issues/11522,https://github.com/ethereum/solidity/pull/11527,Incorrect Output,Semantic Analysis Error,Code Analyzer,Warning Message,Scope,"library, external, internal",1,11522,,,11522
+https://github.com/ethereum/solidity/issues/11521,https://github.com/ethereum/solidity/pull/11534,Incorrect Output,Optimization Error,Parser,ByteCode,initialization of the optimization,NO TEST PROGRAM,0,11521,,,11521
+https://github.com/ethereum/solidity/issues/11506,https://github.com/ethereum/solidity/pull/11569,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,"virtual, override, abstract, modifier",1,11506,,,11506
+https://github.com/ethereum/solidity/issues/11501,https://github.com/ethereum/solidity/pull/11503,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,control flow,external,1,11501,,,11501
+https://github.com/ethereum/solidity/issues/11497,https://github.com/ethereum/solidity/pull/11499,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,control flow,"keccak256, abi.encode",1,11497,,,11497
+https://github.com/ethereum/solidity/issues/11483,https://github.com/ethereum/solidity/pull/12471,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,OOP,override modifier,1,11483,,,11483
+https://github.com/ethereum/solidity/issues/11445,https://github.com/ethereum/solidity/pull/11472,Crash,Semantic Analysis Error,"AST
+CodeGen",Reject Valid Program,Scope,"override, inheritance
+external",1,11445,,,11445
+https://github.com/ethereum/solidity/issues/11440,https://github.com/ethereum/solidity/pull/11441,Incorrect Output,Semantic Analysis Error,CodeGen,Value(s) of Variable(s),Incorrect Source Location,"event, emit, block",1,11440,,,11440
+https://github.com/ethereum/solidity/issues/11418,https://github.com/ethereum/solidity/pull/11419,Crash,Optimization Error,Code Analyzer,Reject Valid Program,Optimization Setting,NO TEST PROGRAM,0,11418,,,11418
+https://github.com/ethereum/solidity/issues/11405,https://github.com/ethereum/solidity/pull/11454,Incorrect Output,Type System Error,AST,Error Message,Incorrect Type System,try-catch,1,11405,,,11405
+https://github.com/ethereum/solidity/issues/11404,https://github.com/ethereum/solidity/pull/11474,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler
+calldata, bytes, external",1,11404,array slice,,11404
+https://github.com/ethereum/solidity/issues/11356,https://github.com/ethereum/solidity/pull/11456,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,"mapping, storage, abstract",1,11356,,,11356
+https://github.com/ethereum/solidity/issues/11353,https://github.com/ethereum/solidity/pull/11480,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Type,"mapping, event",1,11353,,,11353
+https://github.com/ethereum/solidity/issues/11341,https://github.com/ethereum/solidity/pull/11467,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,"view, return",1,11341,,,11341
+https://github.com/ethereum/solidity/issues/11336,https://github.com/ethereum/solidity/pull/11400,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler
+bytes, array",1,11336,array,,11336
+https://github.com/ethereum/solidity/issues/11325,https://github.com/ethereum/solidity/pull/11476,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Incorrect Error Reporting,"external, library, using",1,11325,,,11325
+https://github.com/ethereum/solidity/issues/11233,https://github.com/ethereum/solidity/pull/11234,Crash,Read-write Error,CLI,Poor Error Message,Compatibility Issue,CL,1,11233,,,11233
+https://github.com/ethereum/solidity/issues/11213,https://github.com/ethereum/solidity/pull/11222,Error Omission,Formal Verification Error,Formal Verification,,Incorrect Model Checker Implementation,"library, interface, require, assert",1,11213,,,11213
+https://github.com/ethereum/solidity/issues/11194,https://github.com/ethereum/solidity/pull/11205,Crash,Doc Error,"Parser
+Code Analyzer",Reject Valid Program,,,1,11194,,,11194
+https://github.com/ethereum/solidity/issues/11131,https://github.com/ethereum/solidity/pull/11134,Incorrect Output,Optimization Error,evmasm,Assembly Code,,"assembly
+CLI --optimize",1,11131,yul,,11131
+https://github.com/ethereum/solidity/issues/11128,https://github.com/ethereum/solidity/pull/10228,Crash,Semantic Analysis Error,"Code Analyzer
+AST",Poor Error Message,Circular Dependence,"external, payable, receive()
+CLI --ir",1,11128,,,11128
+https://github.com/ethereum/solidity/issues/11068,https://github.com/ethereum/solidity/pull/11621/files,Incorrect Output,Yul Analysis Error,Yul,ByteCode,Incorrect Source Location,,1,11068,,,11068
+https://github.com/ethereum/solidity/issues/11064,https://github.com/ethereum/solidity/pull/11069,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,ArraySlice `arr[beg:end]`,1,11064,array,,11064
+https://github.com/ethereum/solidity/issues/11041,https://github.com/ethereum/solidity/pull/11071,Crash,Yul Analysis Error,LangUtil,Poor Error Message,Incorrect Source Location,empty Yul,1,11041,yul,,11041
+https://github.com/ethereum/solidity/issues/11039,https://github.com/ethereum/solidity/pull/11236,Crash,Read-write Error,CLI,Reject Valid Program,,CL,1,11039,several files,,11039
+https://github.com/ethereum/solidity/issues/11027,https://github.com/ethereum/solidity/pull/11854,Error Omission,Formal Verification Error,Formal Verification,,Incorrect SMT Encoding,"SMT enabler
+bytes, internal, assert, require",1,11027,array,,11027
+https://github.com/ethereum/solidity/issues/11007,https://github.com/ethereum/solidity/pull/11014,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Function Call Graph,"bytes, inheritance",1,11007,,,11007
+https://github.com/ethereum/solidity/issues/11005,https://github.com/ethereum/solidity/pull/11076,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,".pop, [], SMT enabler",1,11005,array,,11005
+https://github.com/ethereum/solidity/issues/11001,https://github.com/ethereum/solidity/pull/11004,Crash,Memory-Related Error,CodeGen,Reject Valid Program,Allocation Problem,keyword: memory,1,11001,,,11001
+https://github.com/ethereum/solidity/issues/10988,https://github.com/ethereum/solidity/pull/10999,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Type,"abstract, public",1,10988,,,10988
+https://github.com/ethereum/solidity/issues/10985,https://github.com/ethereum/solidity/pull/11116,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler, uint256",1,10985,member,,10985
+https://github.com/ethereum/solidity/issues/10975,https://github.com/ethereum/solidity/pull/10992,Crash,Semantic Analysis Error,Yul,Reject Valid Program,missing type checking,assembly,1,10975,yul,,10975
+https://github.com/ethereum/solidity/issues/10958,https://github.com/ethereum/solidity/pull/10959,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Too Restrict Error Reporting,"external, pure",1,10958,several files,,10958
+https://github.com/ethereum/solidity/issues/10956,https://github.com/ethereum/solidity/pull/10993,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,"constant, import",1,10956,several files,,10956
+https://github.com/ethereum/solidity/issues/10947,https://github.com/ethereum/solidity/pull/10953,Crash,Code Generation Error,CodeGen,Reject Valid Program,,"bytes, pure, modifier",1,10947,IR,,10947
+https://github.com/ethereum/solidity/issues/10940,https://github.com/ethereum/solidity/pull/11459,Crash,Exception Handling Error,CodeGen,Poor Error Message,Incorrect Error Reporting,fixed,1,10940,,,10940
+https://github.com/ethereum/solidity/issues/10926,https://github.com/ethereum/solidity/pull/11092,Crash,Semantic Analysis Error,Formal Verification,Reject Valid Program,OOP,super,1,10926,,,10926
+https://github.com/ethereum/solidity/issues/10920,https://github.com/ethereum/solidity/pull/10991,Crash,Code Generation Error,CodeGen,Reject Valid Program,,"(address(1).call(""""))",1,10920,IR,,10920
+https://github.com/ethereum/solidity/issues/10918,https://github.com/ethereum/solidity/pull/10960,Crash,Memory-Related Error,CodeGen,Reject Valid Program,Allocation Problem,,1,10918,,,10918
+https://github.com/ethereum/solidity/issues/10917,https://github.com/ethereum/solidity/pull/11003,Crash,Code Generation Error,CodeGen,Reject Valid Program,,delete,1,10917,IR,,10917
+https://github.com/ethereum/solidity/issues/10916,https://github.com/ethereum/solidity/pull/10945,Crash,Semantic Analysis Error,CodeGen,Reject Valid Program,Scope,"constructor, modifier",1,10916,,,10916
+https://github.com/ethereum/solidity/issues/10914,https://github.com/ethereum/solidity/pull/11032,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"bytes, push",1,10914,array,,10914
+https://github.com/ethereum/solidity/issues/10900,https://github.com/ethereum/solidity/pull/12850,Crash,Semantic Analysis Error,"Code Analyzer
+AST",Poor Error Message,OOP,"override, calldata, inheritance",1,10900,,,10900
+https://github.com/ethereum/solidity/issues/10895,https://github.com/ethereum/solidity/pull/10911,Crash,Semantic Analysis Error,CodeGen,Poor Error Message,CLI syntax,fixed,1,10895,,,10895
+https://github.com/ethereum/solidity/issues/10892,https://github.com/ethereum/solidity/pull/10950,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Incorrect Error Reporting,event,1,10892,,,10892
+https://github.com/ethereum/solidity/issues/10891,https://github.com/ethereum/solidity/pull/11015,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Incorrect Error Reporting,selector,1,10891,,,10891
+https://github.com/ethereum/solidity/issues/10889,https://github.com/ethereum/solidity/pull/10910,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Unnecessary Error Reporting,uint[] calldata,1,10889,,,10889
+https://github.com/ethereum/solidity/issues/10882,https://github.com/ethereum/solidity/pull/11475,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,OOP,receive(),1,10882,,,10882
+https://github.com/ethereum/solidity/issues/10881,https://github.com/ethereum/solidity/pull/10921,Crash,Doc Error,Parser,Reject Valid Program,,comment,1,10881,,,10881
+https://github.com/ethereum/solidity/issues/10876,https://github.com/ethereum/solidity/pull/13974,Incorrect Output,Formal Verification Error,Formal Verification,SMT analysis result,Incorrect Model Checker Implementation,ternary,1,10876,,,10876
+https://github.com/ethereum/solidity/issues/10874,https://github.com/ethereum/solidity/pull/10886,Crash,Memory-Related Error,Code Analyzer,Reject Valid Program,Null Pointer Dereference,,1,10874,,,10874
+https://github.com/ethereum/solidity/issues/10870,https://github.com/ethereum/solidity/pull/10896,Crash,Type System Error,"Code Analyzer
+CodeGen
+AST",Reject Valid Program,Incorrect Type System,"storage array, pop",1,10870,conversion,,10870
+https://github.com/ethereum/solidity/issues/10831,https://github.com/ethereum/solidity/pull/11088,Crash,Semantic Analysis Error,Formal Verification,Reject Valid Program,Scope,SMT enabler,1,10831,,,10831
+https://github.com/ethereum/solidity/issues/10821,https://github.com/ethereum/solidity/pull/10826,Error Omission,Semantic Analysis Error,Code Analyzer,,Intialization,storage,1,10821,,,10821
+https://github.com/ethereum/solidity/issues/10796,https://github.com/ethereum/solidity/pull/10802,Incorrect Output,Formal Verification Error,Formal Verification,SMT analysis result,Incorrect SMT Encoding,SMT enabler,1,10796,,,10796
+https://github.com/ethereum/solidity/issues/10793,https://github.com/ethereum/solidity/pull/10801,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,SMT enabler,1,10793,array,,10793
+https://github.com/ethereum/solidity/issues/10732,https://github.com/ethereum/solidity/pull/10783,Hang,Semantic Analysis Error,Code Analyzer,,missing type checking,cyclical dependency,1,10732,,,10732
+https://github.com/ethereum/solidity/issues/10730,https://github.com/ethereum/solidity/pull/10763,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"ABI encoder
+assembly",1,10730,yul,,10730
+https://github.com/ethereum/solidity/issues/10712,https://github.com/ethereum/solidity/pull/10777,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,SMT enabler,1,10712,,,10712
+https://github.com/ethereum/solidity/issues/10693,https://github.com/ethereum/solidity/pull/10702,Incorrect Output,Formal Verification Error,Formal Verification,SMT analysis result,Incorrect SMT Encoding,SMT enabler,1,10693,,,10693
+https://github.com/ethereum/solidity/issues/10689,https://github.com/ethereum/solidity/pull/10759,Incorrect Output,Memory-Related Error,CodeGen,function returned value,storage -> memory,"keyword: memory
+dynamic array",1,10689,,,10689
+https://github.com/ethereum/solidity/issues/10671,https://github.com/ethereum/solidity/pull/10685,Error Omission,Formal Verification Error,Formal Verification,,Incorrect Model Checker Implementation,SMT enabler,1,10671,,,10671
+https://github.com/ethereum/solidity/issues/10667,https://github.com/ethereum/solidity/pull/11479,Crash,Code Generation Error,CodeGen,Reject Valid Program,,function array,1,10667,AST->bytecode,,10667
+https://github.com/ethereum/solidity/issues/10666,https://github.com/ethereum/solidity/pull/10721,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,"try catch, SMT enabler, while",1,10666,,,10666
+https://github.com/ethereum/solidity/issues/10660,https://github.com/ethereum/solidity/pull/10670,Crash,Semantic Analysis Error,Formal Verification,Reject Valid Program,Scope,"virtual modifier, member access, SMT enabler",1,10660,,,10660
+https://github.com/ethereum/solidity/issues/10657,https://github.com/ethereum/solidity/pull/10750,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler, push()",1,10657,array,,10657
+https://github.com/ethereum/solidity/issues/10654,https://github.com/ethereum/solidity/pull/10655,Crash,Syntactic Analysis Error,CodeGen,Reject Valid Program,,pragma solidity,1,10654,,,10654
+https://github.com/ethereum/solidity/issues/10620,https://github.com/ethereum/solidity/pull/11482,Incorrect Output,Semantic Analysis Error,Code Analyzer,Warning Message,missing type checking,"abstract, virtual modifer, inheritance",1,10620,,,10620
+https://github.com/ethereum/solidity/issues/10609,https://github.com/ethereum/solidity/pull/10611,Crash,Memory-Related Error,Yul,Reject Valid Program,Out-of-bounds Read,keyword: memory,1,10609,yul,,10609
+https://github.com/ethereum/solidity/issues/10576,https://github.com/ethereum/solidity/pull/10662,Error Omission,Formal Verification Error,Formal Verification,,Incorrect Model Checker Implementation,"SMT enabler, interface",1,10576,,,10576
+https://github.com/ethereum/solidity/issues/10526,https://github.com/ethereum/solidity/pull/10540,Crash,Formal Verification Error,Formal Verification,Segfault,Incorrect SMT Encoding,"SMT enabler, tuple, internal function outside of contract",1,10526,"array, member",,10526
+https://github.com/ethereum/solidity/issues/10525,https://github.com/ethereum/solidity/pull/10588,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,array push assignment,1,10525,array,,10525
+https://github.com/ethereum/solidity/issues/10524,https://github.com/ethereum/solidity/pull/10581,Crash,Semantic Analysis Error,Formal Verification,Reject Valid Program,Scope,"library, tuple, using for",1,10524,,,10524
+https://github.com/ethereum/solidity/issues/10523,https://github.com/ethereum/solidity/pull/10597,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,abstract modifier,1,10523,,,10523
+https://github.com/ethereum/solidity/issues/10522,https://github.com/ethereum/solidity/pull/10529,Crash,Exception Handling Error,Formal Verification,Reject Valid Program,Incorrect Error Reporting,>>=(right shift),1,10522,,,10522
+https://github.com/ethereum/solidity/issues/10517,https://github.com/ethereum/solidity/pull/10601,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,Recursive struct definition,1,10517,,,10517
+https://github.com/ethereum/solidity/issues/10516,https://github.com/ethereum/solidity/pull/11000,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,strucy array,1,10516,,,10516
+https://github.com/ethereum/solidity/issues/10485,https://github.com/ethereum/solidity/pull/10506,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,OOP,"(super), library",1,10485,,,10485
+https://github.com/ethereum/solidity/issues/10439,https://github.com/ethereum/solidity/pull/10490/files,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,bytes,1,10439,array,,10439
+https://github.com/ethereum/solidity/issues/10436,https://github.com/ethereum/solidity/pull/10494,Crash,Memory-Related Error,Formal Verification,Segfault,Out-of-bounds Read,keyword: memory,1,10436,,,10436
+https://github.com/ethereum/solidity/issues/10433,https://github.com/ethereum/solidity/pull/10455,Crash,Memory-Related Error,Code Analyzer,Segfault,,"@return, modifier",1,10433,,,10433
+https://github.com/ethereum/solidity/issues/10306,https://github.com/ethereum/solidity/pull/10310,Incorrect Output,Formal Verification Error,Formal Verification,SMT analysis result,Incorrect Model Checker Implementation,SMT enabler,1,10306,,,10306
+https://github.com/ethereum/solidity/issues/10298,https://github.com/ethereum/solidity/pull/12073,Incorrect Output,Others,evmasm,ByteCode,Linking Error,"CL: --libraries
+Metamorphic Relation",1,10298,,,10298
+https://github.com/ethereum/solidity/issues/10252,https://github.com/ethereum/solidity/pull/10380,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler, bytes memory, &=",1,10252,array,,10252
+https://github.com/ethereum/solidity/issues/10200,https://github.com/ethereum/solidity/pull/10202,Incorrect Output,Semantic Analysis Error,Formal Verification,SMT analysis result,Scope,modifiers with branches,1,10200,,,10200
+https://github.com/ethereum/solidity/issues/10186,https://github.com/ethereum/solidity/pull/11567,Crash,Memory-Related Error,CodeGen,Reject Valid Program,Calldata,keyword: memory,1,10186,,,10186
+https://github.com/ethereum/solidity/issues/10170,https://github.com/ethereum/solidity/pull/10194,Incorrect Output,Code Generation Error,CodeGen,encoding,,revert,1,10170,AST->bytecode,,10170
+https://github.com/ethereum/solidity/issues/10156,https://github.com/ethereum/solidity/pull/10239,Incorrect Output,Code Generation Error,CodeGen,encoding,,,0,10156,ABI,,10156
+https://github.com/ethereum/solidity/issues/10145,https://github.com/ethereum/solidity/pull/11888,Error Omission,Syntactic Analysis Error,Parser,,,// SPDX-License-Identifier,1,10145,,,10145
+https://github.com/ethereum/solidity/issues/10113,https://github.com/ethereum/solidity/pull/11478,Crash,Exception Handling Error,Code Analyzer,Reject Valid Program,Incorrect Error Type,CLI: --evm-version,1,10113,,,10113
+https://github.com/ethereum/solidity/issues/10106,https://github.com/ethereum/solidity/pull/10127,Crash,Exception Handling Error,Formal Verification,Reject Valid Program,Incorrect Error Reporting,fixed >>>,1,10106,,,10106
+https://github.com/ethereum/solidity/issues/10105,https://github.com/ethereum/solidity/pull/10126,Crash,Code Generation Error,CodeGen,Reject Valid Program,,"int[][5], calldata",1,10105,IR,,10105
+https://github.com/ethereum/solidity/issues/10084,https://github.com/ethereum/solidity/pull/10143,Incorrect Output,Semantic Analysis Error,Code Analyzer,Warning Message,control flow,,0,10084,,,10084
+https://github.com/ethereum/solidity/issues/10059,https://github.com/ethereum/solidity/pull/11688,Crash,Doc Error,CLI,Reject Valid Program,,"struct, mapping, require",1,10059,,,10059
+https://github.com/ethereum/solidity/issues/10058,https://github.com/ethereum/solidity/pull/10120,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,A.push() = B.push(),1,10058,array,,10058
+https://github.com/ethereum/solidity/issues/9970,https://github.com/ethereum/solidity/pull/10004,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,OOP,"import
+pragma experimental ABIEncoderV2;",1,9970,several files,,9970
+https://github.com/ethereum/solidity/issues/9969,https://github.com/ethereum/solidity/pull/9971,Crash,Code Generation Error,CodeGen,Reject Valid Program,,"modifier, import, pragma experimental ABIEncoderV2;",1,9969,several files,,9969
+https://github.com/ethereum/solidity/issues/9957,https://github.com/ethereum/solidity/pull/9958,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,incorrect type checking,mapping,1,9957,,,9957
+https://github.com/ethereum/solidity/issues/9952,https://github.com/ethereum/solidity/pull/9953,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,read and write,memory,1,9952,,,9952
+https://github.com/ethereum/solidity/issues/9951,https://github.com/ethereum/solidity/pull/9959,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,"struct with mapping, constant",1,9951,,,9951
+https://github.com/ethereum/solidity/issues/9948,https://github.com/ethereum/solidity/pull/9954,Crash,Exception Handling Error,CodeGen,Poor Error Message,Unnecessary Error Reporting,"library, inheritance",1,9948,,,9948
+https://github.com/ethereum/solidity/issues/9947,https://github.com/ethereum/solidity/pull/9989,Crash,Doc Error,Code Analyzer,Reject Valid Program,,comment,1,9947,,,9947
+https://github.com/ethereum/solidity/issues/9890,https://github.com/ethereum/solidity/pull/9909,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,lack type info extraction,,1,9890,,,9890
+https://github.com/ethereum/solidity/issues/9857,https://github.com/ethereum/solidity/pull/9865,Error Omission,Type System Error,AST,,Incorrect Type Conversion,address,1,9857,,,9857
+https://github.com/ethereum/solidity/issues/9855,https://github.com/ethereum/solidity/pull/9853,Crash,Code Generation Error,CodeGen,Poor Error Message,,CLI: --ir,1,9855,IR,,9855
+https://github.com/ethereum/solidity/issues/9851,https://github.com/ethereum/solidity/pull/9852,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,0,9851,,,9851
+https://github.com/ethereum/solidity/issues/9832,https://github.com/ethereum/solidity/pull/9943,Incorrect Output,Memory-Related Error,CodeGen,Error Message,Memory Cleanup,keyword: memory,1,9832,,,9832
+https://github.com/ethereum/solidity/issues/9821,https://github.com/ethereum/solidity/pull/9822,Crash,Type System Error,AST,Poor Error Message,Incorrect Type Conversion,calldata,1,9821,,,9821
+https://github.com/ethereum/solidity/issues/9817,https://github.com/ethereum/solidity/pull/9849,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,struct with mapping,1,9817,,,9817
+https://github.com/ethereum/solidity/issues/9815,https://github.com/ethereum/solidity/pull/9819,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,9815,,,9815
+https://github.com/ethereum/solidity/issues/9752,https://github.com/ethereum/solidity/pull/9766,Crash,Semantic Analysis Error,AST,Reject Valid Program,OOP,function overriding,1,9752,,,9752
+https://github.com/ethereum/solidity/issues/9745,https://github.com/ethereum/solidity/pull/9750,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,virtual modifier,1,9745,,,9745
+https://github.com/ethereum/solidity/issues/9742,https://github.com/ethereum/solidity/pull/10111,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler, member access",1,9742,member,,9742
+https://github.com/ethereum/solidity/issues/9741,https://github.com/ethereum/solidity/pull/10095,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,ternary,1,9741,,,9741
+https://github.com/ethereum/solidity/issues/9699,https://github.com/ethereum/solidity/pull/9723,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler, ~1",1,9699,,,9699
+https://github.com/ethereum/solidity/issues/9669,https://github.com/ethereum/solidity/pull/9684,Crash,Doc Error,Code Analyzer,Poor Error Message,,@inheritdoc,1,9669,,,9669
+https://github.com/ethereum/solidity/issues/9667,https://github.com/ethereum/solidity/pull/9731,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,import ,1,9667,several files,,9667
+https://github.com/ethereum/solidity/issues/9666,https://github.com/ethereum/solidity/pull/9691,Crash,Exception Handling Error,Code Analyzer,Reject Valid Program,Poor Error Message,function array,1,9666,,,9666
+https://github.com/ethereum/solidity/issues/9659,https://github.com/ethereum/solidity/pull/9709,Crash,Formal Verification Error,Formal Verification,Poor Error Message,Incorrect SMT Encoding,tuple,1,9659,tuple,,9659
+https://github.com/ethereum/solidity/issues/9631,https://github.com/ethereum/solidity/pull/9716,Crash,Formal Verification Error,Formal Verification,Poor Error Message,Incorrect SMT Encoding,tuple,1,9631,tuple,,9631
+https://github.com/ethereum/solidity/issues/9629,https://github.com/ethereum/solidity/pull/9740,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,,constructor,1,9629,,,9629
+https://github.com/ethereum/solidity/issues/9618,https://github.com/ethereum/solidity/pull/9652,Crash,Semantic Analysis Error,CodeGen,Reject Valid Program,Scope,"fallback(), assembly",1,9618,yul,,9618
+https://github.com/ethereum/solidity/issues/9611,https://github.com/ethereum/solidity/pull/9689,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,,0,9611,,,9611
+https://github.com/ethereum/solidity/issues/9596,https://github.com/ethereum/solidity/pull/9748,Crash,Type System Error,AST,Poor Error Message,Incorrect Type Conversion,super,1,9596,,,9596
+https://github.com/ethereum/solidity/issues/9595,https://github.com/ethereum/solidity/pull/10077,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,mapping,1,9595,mapping,,9595
+https://github.com/ethereum/solidity/issues/9573,https://github.com/ethereum/solidity/pull/9672,Incorrect Output,Optimization Error,Yul,ByteCode,,,1,9573,yul,,9573
+https://github.com/ethereum/solidity/issues/9560,https://github.com/ethereum/solidity/pull/9567,Crash,Doc Error,Code Analyzer,Poor Error Message,,,1,9560,,,9560
+https://github.com/ethereum/solidity/issues/9558,https://github.com/ethereum/solidity/pull/9559,Error Omission,Optimization Error,evmasm,,,assembly,1,9558,yul,,9558
+https://github.com/ethereum/solidity/issues/9557,https://github.com/ethereum/solidity/pull/9563,Crash,Semantic Analysis Error,AST,Poor Error Message,Scope,"constructor, internal",1,9557,,,9557
+https://github.com/ethereum/solidity/issues/9550,https://github.com/ethereum/solidity/pull/9568,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,"read and write about
+immutable",immutable,1,9550,,,9550
+https://github.com/ethereum/solidity/issues/9548,https://github.com/ethereum/solidity/pull/9683,Crash,Type System Error,AST,Poor Error Message,Incorrect Type System,signed exponent,1,9548,,,9548
+https://github.com/ethereum/solidity/issues/9519,https://github.com/ethereum/solidity/pull/9522,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,tuple,1,9519,array,,9519
+https://github.com/ethereum/solidity/issues/9509,https://github.com/ethereum/solidity/pull/9514,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Reporting,constructor,1,9509,,,9509
+https://github.com/ethereum/solidity/issues/9506,https://github.com/ethereum/solidity/pull/9521,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,array,1,9506,array,,9506
+https://github.com/ethereum/solidity/issues/9505,https://github.com/ethereum/solidity/pull/9513,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,index access of an array,1,9505,"array, member",,9505
+https://github.com/ethereum/solidity/issues/9499,https://github.com/ethereum/solidity/pull/9520,Crash,Yul Analysis Error,Yul,Reject Valid Program,,"CLI: yulrun --input-file
+assembly",1,9499,yul,,9499
+https://github.com/ethereum/solidity/issues/9472,https://github.com/ethereum/solidity/pull/9489,Crash,Optimization Error,Yul,Reject Valid Program,,"CLI: --strict-assembly --optimize
+assembly",1,9472,yul,,9472
+https://github.com/ethereum/solidity/issues/9443,https://github.com/ethereum/solidity/pull/9686,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,9443,,,9443
+https://github.com/ethereum/solidity/issues/9434,https://github.com/ethereum/solidity/pull/9438,Crash,Semantic Analysis Error,Code Analyzer,Segfault,AST Visitor,CLI: --bin,1,9434,,,9434
+https://github.com/ethereum/solidity/issues/9425,https://github.com/ethereum/solidity/pull/9518,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,address,1,9425,,,9425
+https://github.com/ethereum/solidity/issues/9404,https://github.com/ethereum/solidity/pull/9406,Crash,Memory-Related Error,Code Analyzer,Segfault,Null Pointer Dereference,large static array,1,9404,,,9404
+https://github.com/ethereum/solidity/issues/9381,https://github.com/ethereum/solidity/pull/9422,Error Omission,Type System Error,AST,,Incorrect Type System,ternary with functions,1,9381,,,9381
+https://github.com/ethereum/solidity/issues/9296,https://github.com/ethereum/solidity/pull/9426,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,tuple,1,9296,,,9296
+https://github.com/ethereum/solidity/issues/9270,https://github.com/ethereum/solidity/pull/9835,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,,1,9270,,,9270
+https://github.com/ethereum/solidity/issues/9233,https://github.com/ethereum/solidity/pull/9515,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,tuple,1,9233,tuple,,9233
+https://github.com/ethereum/solidity/issues/9231,https://github.com/ethereum/solidity/pull/10908,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,"struct, enum",1,9231,,,9231
+https://github.com/ethereum/solidity/issues/9229,https://github.com/ethereum/solidity/pull/10006,Crash,Semantic Analysis Error,CodeGen,Reject Valid Program,Scope,"library, import",1,9229,,,9229
+https://github.com/ethereum/solidity/issues/9217,https://github.com/ethereum/solidity/pull/9224,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,using for,1,9217,,,9217
+https://github.com/ethereum/solidity/issues/9207,https://github.com/ethereum/solidity/pull/9690,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,immutable,1,9207,,,9207
+https://github.com/ethereum/solidity/issues/9205,https://github.com/ethereum/solidity/pull/9214,Incorrect Output,Code Generation Error,Yul,wasm code,,yul,1,9205,yul,,9205
+https://github.com/ethereum/solidity/issues/9174,https://github.com/ethereum/solidity/pull/9177,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,memory struct,1,9174,,,9174
+https://github.com/ethereum/solidity/issues/9134,https://github.com/ethereum/solidity/pull/9135,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,"calldata, external",1,9134,,,9134
+https://github.com/ethereum/solidity/issues/9133,https://github.com/ethereum/solidity/pull/12046,Incorrect Output,Semantic Analysis Error,evmasm,ByteCode,Incorrect Source Location,,1,9133,,,9133
+https://github.com/ethereum/solidity/issues/9087,https://github.com/ethereum/solidity/pull/9424,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"fixed type, bitwise operator",1,9087,tuple,,9087
+https://github.com/ethereum/solidity/issues/9065,https://github.com/ethereum/solidity/pull/9108,Error Omission,Semantic Analysis Error,Code Analyzer,,OOP,,1,9065,,,9065
+https://github.com/ethereum/solidity/issues/9028,https://github.com/ethereum/solidity/pull/9044,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,,1,9028,,,9028
+https://github.com/ethereum/solidity/issues/9021,https://github.com/ethereum/solidity/pull/9070,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,,1,9021,array,,9021
+https://github.com/ethereum/solidity/issues/9016,https://github.com/ethereum/solidity/pull/9069,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,try catch,1,9016,array,,9016
+https://github.com/ethereum/solidity/issues/9004,https://github.com/ethereum/solidity/pull/9024,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,inline arrays of some types,1,9004,,,9004
+https://github.com/ethereum/solidity/issues/8991,https://github.com/ethereum/solidity/pull/10575,Crash,Type System Error,"AST
+CodeGen
+Code Analyzer",Reject Valid Program,Incorrect Type Conversion,,1,8991,,,8991
+https://github.com/ethereum/solidity/issues/8971,https://github.com/ethereum/solidity/pull/9045,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,,1,8971,tuple,,8971
+https://github.com/ethereum/solidity/issues/8963,https://github.com/ethereum/solidity/pull/9050,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,,1,8963,yul,,8963
+https://github.com/ethereum/solidity/issues/8960,https://github.com/ethereum/solidity/pull/9018,Crash,Code Generation Error,Yul,Reject Valid Program,,yul,1,8960,yul,,8960
+https://github.com/ethereum/solidity/issues/8947,https://github.com/ethereum/solidity/pull/9051,Crash,Memory-Related Error,Formal Verification,Reject Valid Program,Out-of-bounds Read,,1,8947,,,8947
+https://github.com/ethereum/solidity/issues/8929,https://github.com/ethereum/solidity/pull/8903,Crash,Type System Error,AST,Poor Error Message,Incorrect Type System,large exponent,1,8929,,,8929
+https://github.com/ethereum/solidity/issues/8923,https://github.com/ethereum/solidity/pull/9030,Crash,Memory-Related Error,Code Analyzer,Poor Error Message,stack array is too large,out-of-bound array access,1,8923,,,8923
+https://github.com/ethereum/solidity/issues/8881,https://github.com/ethereum/solidity/pull/9055,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,incorrect type checking,assembly,1,8881,yul,,8881
+https://github.com/ethereum/solidity/issues/8875,https://github.com/ethereum/solidity/pull/9360,Incorrect Output,Exception Handling Error,Code Analyzer,Error Message,Poor Error Message,,1,8875,,,8875
+https://github.com/ethereum/solidity/issues/8820,https://github.com/ethereum/solidity/pull/8800,Incorrect Output,Doc Error,Parser,userdoc,,--userdoc,1,8820,,,8820
+https://github.com/ethereum/solidity/issues/8817,https://github.com/ethereum/solidity/pull/9049,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,,1,8817,,,8817
+https://github.com/ethereum/solidity/issues/8760,https://github.com/ethereum/solidity/pull/8796,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Reporting,tuple,1,8760,,,8760
+https://github.com/ethereum/solidity/issues/8738,https://github.com/ethereum/solidity/pull/8859,Crash,Memory-Related Error,Code Analyzer,Poor Error Message,Null Pointer Dereference,,1,8738,,,8738
+https://github.com/ethereum/solidity/issues/8712,https://github.com/ethereum/solidity/pull/8865,Crash,Semantic Analysis Error,Interface,Reject Valid Program,,internal constructor,1,8712,,,8712
+https://github.com/ethereum/solidity/issues/8711,https://github.com/ethereum/solidity/pull/8752,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,tuple,1,8711,,,8711
+https://github.com/ethereum/solidity/issues/8674,https://github.com/ethereum/solidity/pull/8748,Crash,Memory-Related Error,Formal Verification,Reject Valid Program,Null Pointer Dereference,,1,8674,,,8674
+https://github.com/ethereum/solidity/issues/8671,https://github.com/ethereum/solidity/pull/8672,Incorrect Output,Code Generation Error,CodeGen,IR,,tuple ,1,8671,IR,,8671
+https://github.com/ethereum/solidity/issues/8667,https://github.com/ethereum/solidity/pull/8742,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,,1,8667,array slice,,8667
+https://github.com/ethereum/solidity/issues/8656,https://github.com/ethereum/solidity/pull/8849,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Incorrect Error Reporting,,1,8656,,,8656
+https://github.com/ethereum/solidity/issues/8634,https://github.com/ethereum/solidity/pull/8806,Incorrect Output,Doc Error,Interface,userdoc,,comment,1,8634,,,8634
+https://github.com/ethereum/solidity/issues/8623,https://github.com/ethereum/solidity/pull/8624,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,,1,8623,,,8623
+https://github.com/ethereum/solidity/issues/8590,https://github.com/ethereum/solidity/pull/8630,Crash,Type System Error,AST,Poor Error Message,Incorrect Type System,,1,8590,,,8590
+https://github.com/ethereum/solidity/issues/8577,https://github.com/ethereum/solidity/pull/9411,Incorrect Output,Exception Handling Error,Code Analyzer,Error Message,Incorrect Model Checker Implementation,,1,8577,,,8577
+https://github.com/ethereum/solidity/issues/8450,https://github.com/ethereum/solidity/pull/8550,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,size,tuple,1,8450,,,8450
+https://github.com/ethereum/solidity/issues/8434,https://github.com/ethereum/solidity/pull/8436,Incorrect Output,Semantic Analysis Error,Code Analyzer,Error Message,missing type checking,"abstract contract, inheritance",1,8434,,,8434
+https://github.com/ethereum/solidity/issues/8419,https://github.com/ethereum/solidity/pull/8746,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,,1,8419,,,8419
+https://github.com/ethereum/solidity/issues/8412,https://github.com/ethereum/solidity/pull/9064,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,"fixed, constant, assembly",1,8412,yul,,8412
+https://github.com/ethereum/solidity/issues/8407,https://github.com/ethereum/solidity/pull/8410,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,tuple,1,8407,tuple,,8407
+https://github.com/ethereum/solidity/issues/8406,https://github.com/ethereum/solidity/pull/8791,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Incorrect Error Reporting,,1,8406,,,8406
+https://github.com/ethereum/solidity/issues/8386,https://github.com/ethereum/solidity/pull/8553,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,assembly,1,8386,yul,,8386
+https://github.com/ethereum/solidity/issues/8368,https://github.com/ethereum/solidity/pull/8874,Crash,Syntactic Analysis Error,SolUtil,Reject Valid Program,Format Issue,sha256,1,8368,,,8368
+https://github.com/ethereum/solidity/issues/8308,https://github.com/ethereum/solidity/pull/8462,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,0,8308,IR,,8308
+https://github.com/ethereum/solidity/issues/8302,https://github.com/ethereum/solidity/pull/8314,Incorrect Output,Code Generation Error,CodeGen,IR,,ternary,1,8302,IR,,8302
+https://github.com/ethereum/solidity/issues/8296,https://github.com/ethereum/solidity/pull/8301,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Reporting Location,,1,8296,,,8296
+https://github.com/ethereum/solidity/issues/8286,https://github.com/ethereum/solidity/pull/8665,Crash,Semantic Analysis Error,"Code Analyzer
+AST",Poor Error Message,,uint256 array,1,8286,,,8286
+https://github.com/ethereum/solidity/issues/8283,https://github.com/ethereum/solidity/pull/8313,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Type,call a uncallable var,1,8283,,,8283
+https://github.com/ethereum/solidity/issues/8278,https://github.com/ethereum/solidity/pull/8977,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,assignment to mapping,1,8278,,,8278
+https://github.com/ethereum/solidity/issues/8269,https://github.com/ethereum/solidity/pull/8957/files,Crash,Optimization Error,evmasm,Reject Valid Program,,"CLI: solfuzzer
+duplicate code (true ? {previously-defined v1} : {previously-defined v2})",1,8269,,,8269
+https://github.com/ethereum/solidity/issues/8266,https://github.com/ethereum/solidity/pull/8274,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,recursive type declaration,1,8266,,,8266
+https://github.com/ethereum/solidity/issues/8265,https://github.com/ethereum/solidity/pull/9027,Crash,Memory-Related Error,"Code Analyzer
+AST",Poor Error Message,copy,yul,1,8265,yul,,8265
+https://github.com/ethereum/solidity/issues/8210,https://github.com/ethereum/solidity/pull/10391,Crash,Code Generation Error,CodeGen,Reject Valid Program,,"dynamic-sized array, calldata, external",1,8210,bytecode,,8210
+https://github.com/ethereum/solidity/issues/8171,https://github.com/ethereum/solidity/pull/8337,Incorrect Output,Code Generation Error,evmasm,Assembly,,,1,8171,evmasm,,8171
+https://github.com/ethereum/solidity/issues/8072,https://github.com/ethereum/solidity/pull/8082,Incorrect Output,Optimization Error,Yul,IR,,yul,1,8072,yul,,8072
+https://github.com/ethereum/solidity/issues/7847,https://github.com/ethereum/solidity/pull/7866,Incorrect Output,Optimization Error,Yul,IR,,yul,1,7847,yul,,7847
+https://github.com/ethereum/solidity/issues/7711,https://github.com/ethereum/solidity/pull/7712,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,,"CLI: --evm-version istanbul
+chainid",1,7711,,,7711
+https://github.com/ethereum/solidity/issues/7627,https://github.com/ethereum/solidity/pull/10030,Crash,Code Generation Error,Code Analyzer,Reject Valid Program,OOP,,0,7627,IR,,7627
+https://github.com/ethereum/solidity/issues/7625,https://github.com/ethereum/solidity/pull/7713,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,"pass library as argument
+member access of a library",1,7625,,,7625
+https://github.com/ethereum/solidity/issues/7567,https://github.com/ethereum/solidity/pull/7568,Incorrect Output,Others,evmasm,IR,Uppercase,yul,1,7567,yul,,7567
+https://github.com/ethereum/solidity/issues/7558,https://github.com/ethereum/solidity/pull/7743,Crash,Type System Error,AST,Poor Error Message,Incorrect Type Conversion,,0,7558,,,7558
+https://github.com/ethereum/solidity/issues/7550,https://github.com/ethereum/solidity/pull/7556,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,,modifier,1,7550,,,7550
+https://github.com/ethereum/solidity/issues/7549,https://github.com/ethereum/solidity/pull/7557,Crash,Exception Handling Error,AST,Reject Valid Program,Incorrect Error Reporting,array index,1,7549,,,7549
+https://github.com/ethereum/solidity/issues/7488,https://github.com/ethereum/solidity/pull/7559,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,identifier collision,1,7488,,,7488
+https://github.com/ethereum/solidity/issues/7448,https://github.com/ethereum/solidity/pull/7496,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,arrays of recursive structs,1,7448,,,7448
+https://github.com/ethereum/solidity/issues/7416,https://github.com/ethereum/solidity/pull/7418,Crash,Optimization Error,Yul,Reject Valid Program,,yul,1,7416,yul,,7416
+https://github.com/ethereum/solidity/issues/7411,https://github.com/ethereum/solidity/pull/7425,Incorrect Output,Optimization Error,evmasm,Assembly,,yul,1,7411,yul,,7411
+https://github.com/ethereum/solidity/issues/7410,https://github.com/ethereum/solidity/pull/9702,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,push to a storage array of mapping,1,7410,,,7410
+https://github.com/ethereum/solidity/issues/7378,https://github.com/ethereum/solidity/pull/7431,Crash,Code Generation Error,CodeGen,Reject Valid Program,,pop a dynamic storage array of mapping,1,7378,bytecode,,7378
+https://github.com/ethereum/solidity/issues/7356,https://github.com/ethereum/solidity/pull/7384,Crash,Optimization Error,Yul,Reject Valid Program,,"yul
+CLI: --strict-assembly --optimize",1,7356,yul,,7356
+https://github.com/ethereum/solidity/issues/7314,https://github.com/ethereum/solidity/pull/8137,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,overriding function,1,7314,,,7314
+https://github.com/ethereum/solidity/issues/7305,https://github.com/ethereum/solidity/pull/7306,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"SMT enabler
+array index",1,7305,,,7305
+https://github.com/ethereum/solidity/issues/7296,https://github.com/ethereum/solidity/pull/7961,Crash,Memory-Related Error,Code Analyzer,Segfault,Null Pointer Dereference,yul,1,7296,yul,,7296
+https://github.com/ethereum/solidity/issues/7273,https://github.com/ethereum/solidity/pull/7483,Incorrect Output,Semantic Analysis Error,Code Analyzer,Warning Message,Scope,import as,1,7273,,,7273
+https://github.com/ethereum/solidity/issues/7185,https://github.com/ethereum/solidity/pull/7189,Incorrect Output,Others,LangUtil,Warning Message,Format Issue,,0,7185,,,7185
+https://github.com/ethereum/solidity/issues/7168,https://github.com/ethereum/solidity/pull/7184,Incorrect Output,Semantic Analysis Error,Formal Verification,address,Incorrect Source Location,this,1,7168,,,7168
+https://github.com/ethereum/solidity/issues/7164,https://github.com/ethereum/solidity/pull/7172,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,"branch, tuple, inline function",1,7164,tuple,,7164
+https://github.com/ethereum/solidity/issues/7163,https://github.com/ethereum/solidity/pull/7171,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,>>=,1,7163,,,7163
+https://github.com/ethereum/solidity/issues/7162,https://github.com/ethereum/solidity/pull/7170,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,inline function from other sources,1,7162,several files,,7162
+https://github.com/ethereum/solidity/issues/7155,https://github.com/ethereum/solidity/pull/7157,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,uncalled transfer and send function,1,7155,,,7155
+https://github.com/ethereum/solidity/issues/7150,https://github.com/ethereum/solidity/pull/7174,Incorrect Output,Doc Error,Parser,userdoc,,"CLI: --devdoc
+comment",1,7150,,,7150
+https://github.com/ethereum/solidity/issues/7114,https://github.com/ethereum/solidity/pull/7176,Incorrect Output,Code Generation Error,CodeGen,encoding,,"calldata, memory",1,7114,yul,,7114
+https://github.com/ethereum/solidity/issues/7098,https://github.com/ethereum/solidity/pull/7106,Incorrect Output,Optimization Error,Yul,pre-optimization trace,,"yul
+CLI: yulrun --input-file",1,7098,yul,,7098
+https://github.com/ethereum/solidity/issues/7060,https://github.com/ethereum/solidity/pull/7068,Crash,Memory-Related Error,Code Analyzer,Poor Error Message,,yul,1,7060,yul,,7060
+https://github.com/ethereum/solidity/issues/7035,https://github.com/ethereum/solidity/pull/7037,Error Omission,Semantic Analysis Error,Code Analyzer,,,pure,1,7035,,,7035
+https://github.com/ethereum/solidity/issues/6995,https://github.com/ethereum/solidity/pull/6998,Incorrect Output,Code Generation Error,CodeGen,returned value,,array initialization,1,6995,bytecode,,6995
+https://github.com/ethereum/solidity/issues/6901,https://github.com/ethereum/solidity/pull/6938,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,staticcall.gas,1,6901,,,6901
+https://github.com/ethereum/solidity/issues/6879,https://github.com/ethereum/solidity/pull/7071,Crash,Code Generation Error,Yul,Reject Valid Program,,"yul
+CLI: --strict-assembly",1,6879,yul,,6879
+https://github.com/ethereum/solidity/issues/6866,https://github.com/ethereum/solidity/pull/7122,Performance Issue,Optimization Error,Yul,,,yul,1,6866,yul,,6866
+https://github.com/ethereum/solidity/issues/6864,https://github.com/ethereum/solidity/pull/7145,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,tuple,1,6864,,,6864
+https://github.com/ethereum/solidity/issues/6783,https://github.com/ethereum/solidity/pull/6833,Crash,Code Generation Error,CodeGen,Reject Valid Program,,struct containing an array of mapping,1,6783,bytecode,,6783
+https://github.com/ethereum/solidity/issues/6759,https://github.com/ethereum/solidity/pull/6764,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,abi.encode,1,6759,,,6759
+https://github.com/ethereum/solidity/issues/6754,https://github.com/ethereum/solidity/pull/6771,Crash,Code Generation Error,CodeGen,Reject Valid Program,,constructor args with struct,1,6754,bytecode,,6754
+https://github.com/ethereum/solidity/issues/6731,https://github.com/ethereum/solidity/pull/6819,Performance Issue,Optimization Error,Yul,,,yul,1,6731,yul,,6731
+https://github.com/ethereum/solidity/issues/6617,https://github.com/ethereum/solidity/issues/6617,Error Omission,Semantic Analysis Error,Code Analyzer,,Scope,identifiers named this/super,1,6617,,,6617
+https://github.com/ethereum/solidity/issues/6590,https://github.com/ethereum/solidity/pull/6594,Performance Issue,Optimization Error,Yul,,,yul,1,6590,yul,,6590
+https://github.com/ethereum/solidity/issues/6575,https://github.com/ethereum/solidity/pull/6636,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,"inheritance, type casting",1,6575,,,6575
+https://github.com/ethereum/solidity/issues/6574,https://github.com/ethereum/solidity/pull/6635,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,type casting,1,6574,,,6574
+https://github.com/ethereum/solidity/issues/6562,https://github.com/ethereum/solidity/pull/6640,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,,0,6562,,,6562
+https://github.com/ethereum/solidity/issues/6528,https://github.com/ethereum/solidity/pull/6568,Performance Issue,Optimization Error,Yul,,,yul,1,6528,yul,,6528
+https://github.com/ethereum/solidity/issues/6525,https://github.com/ethereum/solidity/pull/6585,Crash,Code Generation Error,CodeGen,Reject Valid Program,,function assignment,1,6525,bytecode,,6525
+https://github.com/ethereum/solidity/issues/6510,https://github.com/ethereum/solidity/pull/6542,Crash,Yul Analysis Error,Yul,Reject Valid Program,,yul,1,6510,yul,,6510
+https://github.com/ethereum/solidity/issues/6509,https://github.com/ethereum/solidity/pull/6603,Crash,Exception Handling Error,CodeGen,Reject Valid Program,Unnecessary Error Reporting,abi.encode,1,6509,,,6509
+https://github.com/ethereum/solidity/issues/6505,https://github.com/ethereum/solidity/pull/6519,Crash,Syntactic Analysis Error,Parser,Reject Valid Program,,"CLI: --ast
+assembly",1,6505,yul,,6505
+https://github.com/ethereum/solidity/issues/6497,https://github.com/ethereum/solidity/pull/6578,Crash,Semantic Analysis Error,AST,Reject Valid Program,Scope,,1,6497,,,6497
+https://github.com/ethereum/solidity/issues/6451,https://github.com/ethereum/solidity/pull/6604,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,"using for, library",1,6451,,,6451
+https://github.com/ethereum/solidity/issues/6435,https://github.com/ethereum/solidity/pull/6473,Incorrect Output,Type System Error,AST,Emitted Event,Incorrect Type System,emit event,1,6435,,,6435
+https://github.com/ethereum/solidity/issues/6246,https://github.com/ethereum/solidity/pull/6248,Incorrect Output,Optimization Error,evmasm,Assembly,,yul,1,6246,yul,,6246
+https://github.com/ethereum/solidity/issues/6215,https://github.com/ethereum/solidity/pull/6222,Crash,Type System Error,AST,Poor Error Message,Incorrect Type System,internal array of functions,1,6215,,,6215
+https://github.com/ethereum/solidity/issues/6124,https://github.com/ethereum/solidity/pull/6605,Crash,Syntactic Analysis Error,Parser,Poor Error Message,,comment,1,6124,,,6124
+https://github.com/ethereum/solidity/issues/6109,https://github.com/ethereum/solidity/pull/6132,Crash,Memory-Related Error,Code Analyzer,Poor Error Message,Null Pointer Dereference,yul,1,6109,yul,,6109
+https://github.com/ethereum/solidity/issues/6103,https://github.com/ethereum/solidity/pull/6322,Crash,Exception Handling Error,Yul,Poor Error Message,Poor Error Message,assembly,1,6103,yul,,6103
+https://github.com/ethereum/solidity/issues/5875,https://github.com/ethereum/solidity/pull/6034,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,missing type checking,fixed size array state variable,1,5875,,,5875
+https://github.com/ethereum/solidity/issues/5866,https://github.com/ethereum/solidity/pull/5867,Crash,Syntactic Analysis Error,Parser,Poor Error Message,,"import """"",1,5866,,,5866
+https://github.com/ethereum/solidity/issues/5792,https://github.com/ethereum/solidity/pull/5793,Error Omission,Yul Analysis Error,Yul,,case,yul,1,5792,yul,,5792
+https://github.com/ethereum/solidity/issues/5730,https://github.com/ethereum/solidity/pull/5741,Crash,Syntactic Analysis Error,LangUtil,Reject Valid Program,Incorrect Source Location,,1,5730,,,5730
+https://github.com/ethereum/solidity/issues/5722,https://github.com/ethereum/solidity/pull/6080,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,,1,5722,,,5722
+https://github.com/ethereum/solidity/issues/5721,https://github.com/ethereum/solidity/pull/6096,Crash,Exception Handling Error,CodeGen,Poor Error Message,Unimplemented,,1,5721,,,5721
+https://github.com/ethereum/solidity/issues/5706,https://github.com/ethereum/solidity/pull/5716,Incorrect Output,Optimization Error,Yul,IR,,,0,5706,,,5706
+https://github.com/ethereum/solidity/issues/5556,https://github.com/ethereum/solidity/pull/5557,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,getter function overriding,1,5556,,,5556
+https://github.com/ethereum/solidity/issues/5551,https://github.com/ethereum/solidity/pull/5552,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,missing type checking,fixed-point,1,5551,,,5551
+https://github.com/ethereum/solidity/issues/5520,https://github.com/ethereum/solidity/pull/5526,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,Nested structs that are part of a mapping,1,5520,,,5520
+https://github.com/ethereum/solidity/issues/5518,https://github.com/ethereum/solidity/pull/5549,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,missing type checking,memory store with mappings,1,5518,,,5518
+https://github.com/ethereum/solidity/issues/5501,https://github.com/ethereum/solidity/pull/5530,Crash,Memory-Related Error,CLI,Segfault,Null Pointer Dereference,keyword: calldata,1,5501,,,5501
+https://github.com/ethereum/solidity/issues/5465,https://github.com/ethereum/solidity/pull/5594,Crash,Optimization Error,Yul,Reject Valid Program,,yul,1,5465,yul,,5465
+https://github.com/ethereum/solidity/issues/5459,https://github.com/ethereum/solidity/pull/5546,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,incorrect type checking,event and constructor with the same name,1,5459,,,5459
+https://github.com/ethereum/solidity/issues/5458,https://github.com/ethereum/solidity/pull/5637,Crash,Exception Handling Error,CLI,Poor Error Message,Poor Error Message,,0,5458,,,5458
+https://github.com/ethereum/solidity/issues/5456,https://github.com/ethereum/solidity/pull/5838,Crash,Others,Interface,Poor Error Message,useLiteralContent,,0,5456,,,5456
+https://github.com/ethereum/solidity/issues/5384,https://github.com/ethereum/solidity/pull/5593,Crash,Optimization Error,Yul,Reject Valid Program,,,1,5384,yul,,5384
+https://github.com/ethereum/solidity/issues/5279,https://github.com/ethereum/solidity/pull/5351,Crash,Code Generation Error,CodeGen,Poor Error Message,,view function,1,5279,bytecode,,5279
+https://github.com/ethereum/solidity/issues/5130,https://github.com/ethereum/solidity/pull/5558,Crash,Type System Error,AST,Poor Error Message,Incorrect Type System,"function overriding, call super function",1,5130,,,5130
+https://github.com/ethereum/solidity/issues/5059,https://github.com/ethereum/solidity/pull/5195,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,non-unsigned array index,1,5059,,,5059
+https://github.com/ethereum/solidity/issues/5058,https://github.com/ethereum/solidity/pull/5188,Crash,Type System Error,AST,Poor Error Message,Incorrect Type System,,0,5058,,,5058
+https://github.com/ethereum/solidity/issues/5056,https://github.com/ethereum/solidity/pull/5926,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,invalid number literal,1,5056,,,5056
+https://github.com/ethereum/solidity/issues/5055,https://github.com/ethereum/solidity/pull/5548,Crash,Code Generation Error,CodeGen,Reject Valid Program,,internal function,1,5055,bytecode,,5055
+https://github.com/ethereum/solidity/issues/5054,https://github.com/ethereum/solidity/pull/5061,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,multi dimensional fixed-length array with 0 length,1,5054,,,5054
+https://github.com/ethereum/solidity/issues/5053,https://github.com/ethereum/solidity/pull/5149,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Reporting,tuple,1,5053,,,5053
+https://github.com/ethereum/solidity/issues/5052,https://github.com/ethereum/solidity/pull/5137,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,Hex literal + >32 FixedBytes type,1,5052,,,5052
+https://github.com/ethereum/solidity/issues/5048,https://github.com/ethereum/solidity/pull/5533,Crash,Type System Error,AST,Poor Error Message,,nested struct types,1,5048,,,5048
+https://github.com/ethereum/solidity/issues/4893,https://github.com/ethereum/solidity/pull/4896,Incorrect Output,Code Generation Error,CodeGen,returned value,,,1,4893,bytecode,,4893
+https://github.com/ethereum/solidity/issues/4884,https://github.com/ethereum/solidity/pull/8689,Incorrect Output,Syntactic Analysis Error,CLI,Compilation Result,,CLI: --standard-json,1,4884,,,4884
+https://github.com/ethereum/solidity/issues/4879,https://github.com/ethereum/solidity/pull/5546,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,redundant type checking,Inheritance,1,4879,,,4879
+https://github.com/ethereum/solidity/issues/4864,https://github.com/ethereum/solidity/pull/4888,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,,1,4864,,,4864
+https://github.com/ethereum/solidity/issues/4832,https://github.com/ethereum/solidity/pull/5445,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,"inheritance, library, override",1,4832,,,4832
+https://github.com/ethereum/solidity/issues/4771,https://github.com/ethereum/solidity/pull/4790,Crash,Memory-Related Error,Code Analyzer,Reject Valid Program,,"keyword: calldata, memory",1,4771,,,4771
+https://github.com/ethereum/solidity/issues/4743,https://github.com/ethereum/solidity/pull/4866,Incorrect Output,Syntactic Analysis Error,Parser,Source Location,Incorrect Source Location,,1,4743,,,4743
+https://github.com/ethereum/solidity/issues/4718,https://github.com/ethereum/solidity/pull/4797,Performance Issue,Syntactic Analysis Error,Code Analyzer,,Scope,large variable name,1,4718,,,4718
+https://github.com/ethereum/solidity/issues/4716,https://github.com/ethereum/solidity/pull/4872,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Reporting,large index,1,4716,,,4716
+https://github.com/ethereum/solidity/issues/4715,https://github.com/ethereum/solidity/pull/5807,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,,1,4715,,,4715
+https://github.com/ethereum/solidity/issues/4711,https://github.com/ethereum/solidity/pull/4736,Crash,Type System Error,AST,Poor Error Message,Incorrect Type System,call a non-callable type,1,4711,,,4711
+https://github.com/ethereum/solidity/issues/4710,https://github.com/ethereum/solidity/pull/4729,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,yul,1,4710,yul,,4710
+https://github.com/ethereum/solidity/issues/4707,https://github.com/ethereum/solidity/pull/4724,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,yul,1,4707,yul,,4707
+https://github.com/ethereum/solidity/issues/4706,https://github.com/ethereum/solidity/pull/4720,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type Conversion,,1,4706,,,4706
+https://github.com/ethereum/solidity/issues/4702,https://github.com/ethereum/solidity/pull/11545,Incorrect Output,Read-write Error,Interface,metadata,,,1,4702,,,4702
+https://github.com/ethereum/solidity/issues/4683,https://github.com/ethereum/solidity/pull/4782,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,4683,,,4683
+https://github.com/ethereum/solidity/issues/4679,https://github.com/ethereum/solidity/pull/4681,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,,,1,4679,,,4679
+https://github.com/ethereum/solidity/issues/4673,https://github.com/ethereum/solidity/pull/4765,Hang,Others,AST,,,,1,4673,,,4673
+https://github.com/ethereum/solidity/issues/4670,https://github.com/ethereum/solidity/pull/4798,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,,0,4670,,,4670
+https://github.com/ethereum/solidity/issues/4635,https://github.com/ethereum/solidity/pull/5382,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,control flow,,1,4635,,,4635
+https://github.com/ethereum/solidity/issues/4585,https://github.com/ethereum/solidity/pull/4621,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Incorrect Error Type,,1,4585,,,4585
+https://github.com/ethereum/solidity/issues/4568,https://github.com/ethereum/solidity/pull/4565,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,,1,4568,,,4568
+https://github.com/ethereum/solidity/issues/4567,https://github.com/ethereum/solidity/pull/4744,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,,1,4567,,,4567
+https://github.com/ethereum/solidity/issues/4558,https://github.com/ethereum/solidity/pull/9703,Incorrect Output,Exception Handling Error,Code Analyzer,Warning Message,Incorrect Error Reporting,,1,4558,,,4558
+https://github.com/ethereum/solidity/issues/4535,https://github.com/ethereum/solidity/pull/4777,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,missing type checking,,1,4535,,,4535
+https://github.com/ethereum/solidity/issues/4517,https://github.com/ethereum/solidity/pull/6417,Crash,Memory-Related Error,"Code Analyzer
+AST
+CodeGen",Reject Valid Program,Ownership,,1,4517,,,4517
+https://github.com/ethereum/solidity/issues/4483,https://github.com/ethereum/solidity/pull/4501,Crash,Memory-Related Error,Code Analyzer,Reject Valid Program,Stack Overflow,large array,1,4483,,,4483
+https://github.com/ethereum/solidity/issues/4477,https://github.com/ethereum/solidity/pull/4480,Hang,Type System Error,AST,,Incorrect Type System,,1,4477,,,4477
+https://github.com/ethereum/solidity/issues/4476,https://github.com/ethereum/solidity/pull/4479,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,1,4476,bytecode,,4476
+https://github.com/ethereum/solidity/issues/4471,https://github.com/ethereum/solidity/pull/9362,Hang,Optimization Error,evmasm,Gas,,,1,4471,,,4471
+https://github.com/ethereum/solidity/issues/4417,https://github.com/ethereum/solidity/pull/4508,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,Scope,,1,4417,,,4417
+https://github.com/ethereum/solidity/issues/4414,https://github.com/ethereum/solidity/pull/4443,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,Scope,,1,4414,,,4414
+https://github.com/ethereum/solidity/issues/4382,https://github.com/ethereum/solidity/pull/4738,Incorrect Output,Memory-Related Error,"Code Analyzer
+AST",Error Message,,array,1,4382,,,4382
+https://github.com/ethereum/solidity/issues/4292,https://github.com/ethereum/solidity/pull/4644,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,,event,1,4292,,,4292
+https://github.com/ethereum/solidity/issues/4260,https://github.com/ethereum/solidity/pull/9146,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,,,1,4260,,,4260
+https://github.com/ethereum/solidity/issues/4162,https://github.com/ethereum/solidity/pull/4983,Incorrect Output,Optimization Error,evmasm,Error Message,,,1,4162,,,4162
+https://github.com/ethereum/solidity/issues/4051,https://github.com/ethereum/solidity/pull/4062,Crash,Memory-Related Error,CodeGen,Reject Valid Program,,,1,4051,,,4051
+https://github.com/ethereum/solidity/issues/3911,https://github.com/ethereum/solidity/pull/3912,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,1,3911,,,3911
+https://github.com/ethereum/solidity/issues/3910,https://github.com/ethereum/solidity/pull/3941,Crash,Type System Error,AST,Poor Error Message,Incorrect Type Conversion,,1,3910,,,3910
+https://github.com/ethereum/solidity/issues/3889,https://github.com/ethereum/solidity/pull/3976,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,1,3889,,,3889
+https://github.com/ethereum/solidity/issues/3861,https://github.com/ethereum/solidity/pull/3875,Incorrect Output,Semantic Analysis Error,Code Analyzer,Error Message,static analysis,,1,3861,,,3861
+https://github.com/ethereum/solidity/issues/3796,https://github.com/ethereum/solidity/pull/3799,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,,1,3796,,,3796
+https://github.com/ethereum/solidity/issues/3779,https://github.com/ethereum/solidity/pull/3863,Hang,Optimization Error,Interface,Gas,,,1,3779,,,3779
+https://github.com/ethereum/solidity/issues/3770,https://github.com/ethereum/solidity/pull/4590,Error Omission,Semantic Analysis Error,Code Analyzer,,,,1,3770,,,3770
+https://github.com/ethereum/solidity/issues/3759,https://github.com/ethereum/solidity/pull/3793,Hang,Optimization Error,AST,,number limit,,1,3759,,,3759
+https://github.com/ethereum/solidity/issues/3738,https://github.com/ethereum/solidity/pull/3775,Crash,Exception Handling Error,AST,Poor Error Message,Poor Error Message,,1,3738,,,3738
+https://github.com/ethereum/solidity/issues/3728,https://github.com/ethereum/solidity/pull/3730,Crash,Doc Error,Parser,Reject Valid Program,,,1,3728,,,3728
+https://github.com/ethereum/solidity/issues/3547,https://github.com/ethereum/solidity/pull/3550,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Lack Warning,yul,1,3547,yul,,3547
+https://github.com/ethereum/solidity/issues/3522,https://github.com/ethereum/solidity/pull/3848,Error Omission,Semantic Analysis Error,Code Analyzer,,static analysis,,0,3522,,,3522
+https://github.com/ethereum/solidity/issues/3493,https://github.com/ethereum/solidity/pull/4085,Incorrect Output,Code Generation Error,CodeGen,event,,,1,3493,bytecode,,3493
+https://github.com/ethereum/solidity/issues/3414,https://github.com/ethereum/solidity/pull/3549,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,,1,3414,,,3414
+https://github.com/ethereum/solidity/issues/3409,https://github.com/ethereum/solidity/pull/6187,Incorrect Output,Syntactic Analysis Error,Interface,JSON output,Incorrect Source Location,,1,3409,,,3409
+https://github.com/ethereum/solidity/issues/3325,https://github.com/ethereum/solidity/pull/3853,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,1,3325,,,3325
+https://github.com/ethereum/solidity/issues/3323,https://github.com/ethereum/solidity/pull/3745,Performance Issue,Semantic Analysis Error,Code Analyzer,RAM blowup,recursion,,1,3323,,,3323
+https://github.com/ethereum/solidity/issues/3307,https://github.com/ethereum/solidity/pull/3310,Incorrect Output,Semantic Analysis Error,Code Analyzer,Error Message,,,1,3307,,,3307
+https://github.com/ethereum/solidity/issues/3293,https://github.com/ethereum/solidity/pull/5996,Crash,Code Generation Error,CodeGen,Reject Valid Program,ABI,,1,3293,bytecode,,3293
+https://github.com/ethereum/solidity/issues/3291,https://github.com/ethereum/solidity/pull/3752,Crash,Syntactic Analysis Error,Parser,Reject Valid Program,,,1,3291,,,3291
+https://github.com/ethereum/solidity/issues/3271,https://github.com/ethereum/solidity/pull/3686,Incorrect Output,Code Generation Error,CodeGen,The runtime code,,,1,3271,bytecode,,3271
+https://github.com/ethereum/solidity/issues/3085,https://github.com/ethereum/solidity/pull/3086,Crash,Code Generation Error,evmasm,Reject Valid Program,,,1,3085,evmasm,,3085
+https://github.com/ethereum/solidity/issues/3069,https://github.com/ethereum/solidity/pull/3272,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,ABI encoder,,1,3069,,,3069
+https://github.com/ethereum/solidity/issues/3064,https://github.com/ethereum/solidity/pull/3067,Incorrect Output,Memory-Related Error,CodeGen,,Memory Allocation,"keyword: memory
+dynamic array",1,3064,,,3064
+https://github.com/ethereum/solidity/issues/3039,https://github.com/ethereum/solidity/pull/3873,Crash,Syntactic Analysis Error,Parser,Poor Error Message,,,1,3039,,,3039
+https://github.com/ethereum/solidity/issues/3019,https://github.com/ethereum/solidity/pull/3025,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,,1,3019,,,3019
+https://github.com/ethereum/solidity/issues/3001,https://github.com/ethereum/solidity/pull/3020,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect Model Checker Implementation,,1,3001,,,3001
+https://github.com/ethereum/solidity/issues/2984,https://github.com/ethereum/solidity/pull/2986,Incorrect Output,Syntactic Analysis Error,Parser,Source Location,,,1,2984,,,2984
+https://github.com/ethereum/solidity/issues/2977,https://github.com/ethereum/solidity/pull/3725,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,1,2977,bytecode,,2977
+https://github.com/ethereum/solidity/issues/2969,https://github.com/ethereum/solidity/pull/3753,Crash,Type System Error,"AST
+CodeGen
+Code Analyzer",Poor Error Message,Incorrect Type System,,1,2969,,,2969
+https://github.com/ethereum/solidity/issues/2965,https://github.com/ethereum/solidity/pull/3932,Incorrect Output,Semantic Analysis Error,Code Analyzer,Error Message,,,1,2965,,,2965
+https://github.com/ethereum/solidity/issues/2916,https://github.com/ethereum/solidity/pull/4412,Incorrect Output,Exception Handling Error,Code Analyzer,Error Message,Incorrect Error Type,yul,1,2916,yul,,2916
+https://github.com/ethereum/solidity/issues/2915,https://github.com/ethereum/solidity/pull/2919,Crash,Memory-Related Error,Code Analyzer,Reject Valid Program,array length,"large array, memory access",1,2915,,,2915
+https://github.com/ethereum/solidity/issues/2913,https://github.com/ethereum/solidity/pull/2925,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,,,1,2913,,,2913
+https://github.com/ethereum/solidity/issues/2912,https://github.com/ethereum/solidity/pull/3757,Crash,Code Generation Error,CodeGen,Poor Error Message,,,1,2912,bytecode,,2912
+https://github.com/ethereum/solidity/issues/2804,https://github.com/ethereum/solidity/pull/2837,Incorrect Output,Type System Error,AST,JSON,Incorrect Type System,,1,2804,,,2804
+https://github.com/ethereum/solidity/issues/2764,https://github.com/ethereum/solidity/pull/3549,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,ABI encoder,,1,2764,,,2764
+https://github.com/ethereum/solidity/issues/2752,https://github.com/ethereum/solidity/pull/2763,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,1,2752,,,2752
+https://github.com/ethereum/solidity/issues/2739,https://github.com/ethereum/solidity/pull/3724,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,2739,,,2739
+https://github.com/ethereum/solidity/issues/2733,https://github.com/ethereum/solidity/pull/2734,Error Omission,Semantic Analysis Error,Code Analyzer,,,,1,2733,,,2733
+https://github.com/ethereum/solidity/issues/2676,https://github.com/ethereum/solidity/pull/2692,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,,0,2676,,,2676
+https://github.com/ethereum/solidity/issues/2655,https://github.com/ethereum/solidity/pull/2936,Crash,Type System Error,AST,Reject Valid Program,,,1,2655,,,2655
+https://github.com/ethereum/solidity/issues/2147,https://github.com/ethereum/solidity/pull/3015,Incorrect Output,Syntactic Analysis Error,CLI,Warnning Message,,CLI: --allow-paths,1,2147,,,2147
+https://github.com/ethereum/solidity/issues/2108,https://github.com/ethereum/solidity/pull/2110,Crash,Semantic Analysis Error,Code Analyzer,,,,1,2108,,,2108
+https://github.com/ethereum/solidity/issues/2104,https://github.com/ethereum/solidity/pull/3722,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,1,2104,bytecode,,2104
+https://github.com/ethereum/solidity/issues/1799,https://github.com/ethereum/solidity/pull/2565,Crash,Exception Handling Error,Code Analyzer,Poor Error Message,Poor Error Message,,1,1799,,,1799
+https://github.com/ethereum/solidity/issues/1769,https://github.com/ethereum/solidity/pull/2697,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,scope,,1,1769,,,1769
+https://github.com/ethereum/solidity/issues/1731,https://github.com/ethereum/solidity/pull/1737,Incorrect Output,Semantic Analysis Error,Code Analyzer,returned value,missing type checking,,1,1731,,,1731
+https://github.com/ethereum/solidity/issues/1724,https://github.com/ethereum/solidity/pull/1750,Crash,Syntactic Analysis Error,Parser,Reject Valid Program,,,1,1724,,,1724
+https://github.com/ethereum/solidity/issues/1721,https://github.com/ethereum/solidity/pull/2564,Error Omission,Memory-Related Error,AST,,Too larger calldata array,large array,1,1721,,,1721
+https://github.com/ethereum/solidity/issues/1720,https://github.com/ethereum/solidity/pull/1749,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,1,1720,,,1720
+https://github.com/ethereum/solidity/issues/1717,https://github.com/ethereum/solidity/pull/1767,Crash,Syntactic Analysis Error,CLI,Reject Valid Program,long linker commandline argument,,1,1717,,,1717
+https://github.com/ethereum/solidity/issues/1709,https://github.com/ethereum/solidity/pull/1748,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,missing type checking,,1,1709,,,1709
+https://github.com/ethereum/solidity/issues/1696,https://github.com/ethereum/solidity/pull/1747,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,1696,,,1696
+https://github.com/ethereum/solidity/issues/1652,https://github.com/ethereum/solidity/pull/1768,Incorrect Output,Read-write Error,CLI,File,,,0,1652,,,1652
+https://github.com/ethereum/solidity/issues/1647,https://github.com/ethereum/solidity/pull/1649,Crash,Read-write Error,CLI,,,CLI,1,1647,,,1647
+https://github.com/ethereum/solidity/issues/1469,https://github.com/ethereum/solidity/pull/1475,Incorrect Output,Code Generation Error,CodeGen,Bytecode,,,1,1469,bytecode,,1469
+https://github.com/ethereum/solidity/issues/1466,https://github.com/ethereum/solidity/pull/1736,Hang,Optimization Error,evmasm,,,,1,1466,,,1466
+https://github.com/ethereum/solidity/issues/1457,https://github.com/ethereum/solidity/pull/1606,Error Omission,Semantic Analysis Error,evmasm,,scope,,1,1457,,,1457
+https://github.com/ethereum/solidity/issues/1436,https://github.com/ethereum/solidity/pull/1733,Crash,Semantic Analysis Error,Code Analyzer,Segfault,,self-referential constant,1,1436,,,1436
+https://github.com/ethereum/solidity/issues/1433,https://github.com/ethereum/solidity/pull/1454,Incorrect Output,Syntactic Analysis Error,Parser,Bytecode,,,1,1433,,,1433
+https://github.com/ethereum/solidity/issues/1416,https://github.com/ethereum/solidity/pull/1417,Incorrect Output,Optimization Error,evmasm,Value of variable,,,1,1416,,,1416
+https://github.com/ethereum/solidity/issues/1415,https://github.com/ethereum/solidity/pull/1728,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type Conversion,,1,1415,,,1415
+https://github.com/ethereum/solidity/issues/1368,https://github.com/ethereum/solidity/pull/1375,Incorrect Output,Memory-Related Error,evmasm,Warning Message,Stack Size,Yul,1,1368,yul,,1368
+https://github.com/ethereum/solidity/issues/1364,https://github.com/ethereum/solidity/pull/1367,Incorrect Output,Type System Error,AST,AST,Incorrect Type Information,,1,1364,,,1364
+https://github.com/ethereum/solidity/issues/1343,https://github.com/ethereum/solidity/pull/1334,Error Omission,Semantic Analysis Error,"AST
+CodeGen
+Parser",,value range,,1,1343,,,1343
+https://github.com/ethereum/solidity/issues/1286,https://github.com/ethereum/solidity/pull/1474,Crash,Semantic Analysis Error,AST,Reject Valid Program,Scope,,1,1286,,,1286
+https://github.com/ethereum/solidity/issues/1258,https://github.com/ethereum/solidity/pull/1633,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,missing type checking,,1,1258,,,1258
+https://github.com/ethereum/solidity/issues/1250,https://github.com/ethereum/solidity/pull/1727,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,missing type checking,,1,1250,,,1250
+https://github.com/ethereum/solidity/issues/1246,https://github.com/ethereum/solidity/pull/1274,Error Omission,Type System Error,AST,,Incorrect Type System,,1,1246,,,1246
+https://github.com/ethereum/solidity/issues/1242,https://github.com/ethereum/solidity/pull/1244,Crash,Memory-Related Error,AST,Reject Valid Program,Allocation,,1,1242,,,1242
+https://github.com/ethereum/solidity/issues/1192,https://github.com/ethereum/solidity/pull/1193,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,,1,1192,,,1192
+https://github.com/ethereum/solidity/issues/1177,https://github.com/ethereum/solidity/pull/1181,Crash,Formal Verification Error,Formal Verification,Poor Error Message,Incorrect SMT Encoding,,1,1177,,,1177
+https://github.com/ethereum/solidity/issues/1151,https://github.com/ethereum/solidity/pull/1240,Crash,Semantic Analysis Error,AST,Reject Valid Program,Scope,,1,1151,,,1151
+https://github.com/ethereum/solidity/issues/1150,https://github.com/ethereum/solidity/pull/1218,Crash,Memory-Related Error,AST,Reject Valid Program,Null Pointer Dereference,dynamic array,1,1150,,,1150
+https://github.com/ethereum/solidity/issues/1145,https://github.com/ethereum/solidity/pull/1634,Crash,Exception Handling Error,evmasm,Poor Error Message,Too late Error Reporting,,1,1145,,,1145
+https://github.com/ethereum/solidity/issues/1144,https://github.com/ethereum/solidity/pull/1182,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,missing type checking,yul,1,1144,yul,,1144
+https://github.com/ethereum/solidity/issues/1135,https://github.com/ethereum/solidity/pull/1158,Crash,Syntactic Analysis Error,evmasm,Reject Valid Program,,,1,1135,,,1135
+https://github.com/ethereum/solidity/issues/1134,https://github.com/ethereum/solidity/pull/1156,Crash,Syntactic Analysis Error,evmasm,Reject Valid Program,,,1,1134,,,1134
+https://github.com/ethereum/solidity/issues/1131,https://github.com/ethereum/solidity/pull/1243,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,1131,,,1131
+https://github.com/ethereum/solidity/issues/1116,https://github.com/ethereum/solidity/pull/1263,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,1,1116,bytecode,,1116
+https://github.com/ethereum/solidity/issues/1099,https://github.com/ethereum/solidity/pull/1101,Crash,Exception Handling Error,AST,Reject Valid Program,Incorrect Error Type,,1,1099,,,1099
+https://github.com/ethereum/solidity/issues/1092,https://github.com/ethereum/solidity/pull/1595,Incorrect Output,Code Generation Error,CodeGen,Gas,,,1,1092,bytecode,,1092
+https://github.com/ethereum/solidity/issues/1083,https://github.com/ethereum/solidity/pull/1104,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,1,1083,bytecode,,1083
+https://github.com/ethereum/solidity/issues/1075,https://github.com/ethereum/solidity/pull/1102,Incorrect Output,Code Generation Error,CodeGen,,,,0,1075,bytecode,,1075
+https://github.com/ethereum/solidity/issues/1040,https://github.com/ethereum/solidity/pull/1592,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,1,1040,,,1040
+https://github.com/ethereum/solidity/issues/1017,https://github.com/ethereum/solidity/pull/1018,Error Omission,Semantic Analysis Error,Code Analyzer,,missing type checking,,1,1017,,,1017
+https://github.com/ethereum/solidity/issues/988,https://github.com/ethereum/solidity/pull/1264,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,1,988,bytecode,,988
+https://github.com/ethereum/solidity/issues/981,https://github.com/ethereum/solidity/pull/993,Crash,Exception Handling Error,CodeGen,Poor Error Message,Lack Checking,sha3,1,981,,,981
+https://github.com/ethereum/solidity/issues/976,https://github.com/ethereum/solidity/pull/1729,Incorrect Output,Semantic Analysis Error,Code Analyzer,output,missing type checking,,1,976,,,976
+https://github.com/ethereum/solidity/issues/970,https://github.com/ethereum/solidity/pull/994,Crash,Exception Handling Error,CLI,,Lack Checking,,1,970,,,970
+https://github.com/ethereum/solidity/issues/922,https://github.com/ethereum/solidity/pull/995,Crash,Syntactic Analysis Error,AST,Reject Valid Program,AST2Converter error,,1,922,,,922
+https://github.com/ethereum/solidity/issues/853,https://github.com/ethereum/solidity/pull/856,Incorrect Output,Code Generation Error,AST,AST JSON,,,1,853,JSON,,853
+https://github.com/ethereum/solidity/issues/742,https://github.com/ethereum/solidity/pull/794,Crash,Code Generation Error,AST,Segfault,,,1,742,JSON,,742
+https://github.com/ethereum/solidity/issues/736,https://github.com/ethereum/solidity/pull/1588,Crash,Code Generation Error,CodeGen,Segfault,,,1,736,bytecode,,736
+https://github.com/ethereum/solidity/issues/733,https://github.com/ethereum/solidity/pull/997,Crash,Semantic Analysis Error,CLI,Reject Valid Program,Scope,CLI,1,733,,,733
+https://github.com/ethereum/solidity/issues/702,https://github.com/ethereum/solidity/pull/711,Crash,Read-write Error,CLI,Reject Valid Program,,CLI: --ast,1,702,,,702
+https://github.com/ethereum/solidity/issues/692,https://github.com/ethereum/solidity/pull/762,Incorrect Output,Optimization Error,evmasm,Value of variable,,,1,692,,,692
+https://github.com/ethereum/solidity/issues/674,https://github.com/ethereum/solidity/issues/674,Crash,Others,CLI,Reject Valid Program,,,1,674,,,674
+https://github.com/ethereum/solidity/issues/651,https://github.com/ethereum/solidity/pull/652,Crash,Read-write Error,CLI,Reject Valid Program,,,1,651,,,651
+https://github.com/ethereum/solidity/issues/647,https://github.com/ethereum/solidity/pull/836,Error Omission,Semantic Analysis Error,Code Analyzer,,,,1,647,,,647
+https://github.com/ethereum/solidity/issues/621,https://github.com/ethereum/solidity/pull/1293,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,,1,621,,,621
+https://github.com/ethereum/solidity/issues/590,https://github.com/ethereum/solidity/pull/756,Incorrect Output,Code Generation Error,CodeGen,asm,,,1,590,bytecode,,590
+https://github.com/ethereum/solidity/issues/564,https://github.com/ethereum/solidity/pull/926,Incorrect Output,Code Generation Error,evmasm,asm,,,1,564,evmasm,,564
+https://github.com/ethereum/solidity/issues/561,https://github.com/ethereum/solidity/pull/1194,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,561,,,561
+https://github.com/ethereum/solidity/issues/549,https://github.com/ethereum/solidity/pull/1261,Crash,Semantic Analysis Error,AST,Reject Valid Program,Scope,,1,549,,,549
+https://github.com/ethereum/solidity/issues/535,https://github.com/ethereum/solidity/pull/1005,Error Omission,Syntactic Analysis Error,Parser,,,,1,535,,,535
+https://github.com/ethereum/solidity/issues/530,https://github.com/ethereum/solidity/pull/588,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type Conversion,,1,530,,,530
+https://github.com/ethereum/solidity/issues/526,https://github.com/ethereum/solidity/pull/9334,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,,1,526,,,526
+https://github.com/ethereum/solidity/issues/489,https://github.com/ethereum/solidity/pull/996,Incorrect Output,Type System Error,Interface,JSON,Incorrect Type System,,1,489,,,489
+https://github.com/ethereum/solidity/issues/485,https://github.com/ethereum/solidity/pull/506,Incorrect Output,Code Generation Error,CodeGen,Value of variable,,,0,485,bytecode,,485
+https://github.com/ethereum/solidity/issues/484,https://github.com/ethereum/solidity/pull/505,Incorrect Output,Code Generation Error,CodeGen,Gas,,,1,484,bytecode,,484
+https://github.com/ethereum/solidity/issues/478,https://github.com/ethereum/solidity/pull/1169,Incorrect Output,Syntactic Analysis Error,evmasm,Error Message,,yul,1,478,yul,,478
+https://github.com/ethereum/solidity/issues/472,https://github.com/ethereum/solidity/pull/475,Crash,Syntactic Analysis Error,evmasm,,,,1,472,,,472
+https://github.com/ethereum/solidity/issues/466,https://github.com/ethereum/solidity/pull/467,Crash,Memory-Related Error,Interface,Reject Valid Program,Null Pointer Dereference,yul,1,466,yul,,466
+https://github.com/ethereum/solidity/issues/446,https://github.com/ethereum/solidity/pull/465,Crash,Type System Error,CodeGen,Reject Valid Program,Incorrect Type Conversion,,1,446,,,446
+https://github.com/ethereum/solidity/issues/428,https://github.com/ethereum/solidity/pull/457,Incorrect Output,Syntactic Analysis Error,Parser,Returned Value,Incorrect Lexical Analysis,,0,428,,,428
+https://github.com/ethereum/solidity/issues/396,https://github.com/ethereum/solidity/pull/1591,Incorrect Output,Exception Handling Error,CodeGen,Error Message,Poor Error Message,,0,396,,,396
+https://github.com/ethereum/solidity/issues/352,https://github.com/ethereum/solidity/pull/359,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,,1,352,,,352
+https://github.com/ethereum/solidity/issues/340,https://github.com/ethereum/solidity/pull/342,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,,,1,340,,,340
+https://github.com/ethereum/solidity/issues/339,https://github.com/ethereum/solidity/pull/720,Crash,Formal Verification Error,Formal Verification,Reject Valid Program,Incorrect SMT Encoding,,1,339,,,339
+https://github.com/ethereum/solidity/issues/280,https://github.com/ethereum/solidity/pull/309,Error Omission,Semantic Analysis Error,AST,,Scope,,1,280,,,280
+https://github.com/ethereum/solidity/issues/254,https://github.com/ethereum/solidity/pull/257,Incorrect Output,Code Generation Error,CodeGen,ByteCode,,,1,254,bytecode,,254
+https://github.com/ethereum/solidity/issues/247,https://github.com/ethereum/solidity/pull/308,Incorrect Output,Type System Error,AST,Error Message,Incorrect Type System,,1,247,,,247
+https://github.com/ethereum/solidity/issues/243,https://github.com/ethereum/solidity/pull/244,Incorrect Output,Memory-Related Error,CodeGen,Value,Allocation,keyword: memory,1,243,,,243
+https://github.com/ethereum/solidity/issues/212,https://github.com/ethereum/solidity/pull/218,Incorrect Output,Memory-Related Error,CodeGen,Value,Overwrite,keyword: memory,1,212,,,212
+https://github.com/ethereum/solidity/issues/179,https://github.com/ethereum/solidity/pull/185,Crash,Code Generation Error,CodeGen,Reject Valid Program,,,1,179,bytecode,,179
+https://github.com/ethereum/solidity/issues/138,https://github.com/ethereum/solidity/pull/145,Crash,Syntactic Analysis Error,Parser,Reject Valid Program,,,1,138,,,138
+https://github.com/ethereum/solidity/issues/137,https://github.com/ethereum/solidity/pull/143,Crash,Code Generation Error,CodeGen,Poor Error Message,,,1,137,bytecode,,137
+https://github.com/ethereum/solidity/issues/127,https://github.com/ethereum/solidity/pull/141,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,127,,,127
+https://github.com/ethereum/solidity/issues/116,https://github.com/ethereum/solidity/pull/121,Crash,Semantic Analysis Error,Code Analyzer,Reject Valid Program,Scope,,1,116,,,116
+https://github.com/ethereum/solidity/issues/106,https://github.com/ethereum/solidity/pull/123,Crash,Semantic Analysis Error,Code Analyzer,Poor Error Message,,,1,106,,,106
+https://github.com/ethereum/solidity/pull/6193,https://github.com/ethereum/solidity/pull/6193,Crash,Optimization Error,Yul,Reject Valid Program,,"CLI:--strict-assembly
+yul",1,93,yul,,93
+https://github.com/ethereum/solidity/issues/90,https://github.com/ethereum/solidity/pull/91,Incorrect Output,Type System Error,AST,Storage Location,Incorrect Type System,,1,90,,,90
+https://github.com/ethereum/solidity/issues/63,https://github.com/ethereum/solidity/pull/65,Error Omission,Type System Error,AST,,Incorrect Type System,,1,63,,,63
+https://github.com/ethereum/solidity/issues/59,https://github.com/ethereum/solidity/pull/64,Crash,Syntactic Analysis Error,Lexer,Reject Valid Program,Incorrect Lexical Analysis,,1,59,,,59
+https://github.com/ethereum/solidity/issues/50,https://github.com/ethereum/solidity/pull/69,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,50,,,50
+https://github.com/ethereum/solidity/issues/28,https://github.com/ethereum/solidity/pull/54,Crash,Type System Error,AST,Reject Valid Program,Incorrect Type System,,1,28,,,28
