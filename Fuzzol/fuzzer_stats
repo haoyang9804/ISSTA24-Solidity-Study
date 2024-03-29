@@ -1,7 +1,7 @@
 start_time        : 1709474168
 last_update       : 1711211683
 fuzzer_pid        : 2057384
-cycles_done       : 0
+cycles_done       : 815
 execs_done        : 303274569
 execs_per_sec     : 199.09
 paths_total       : 6130
