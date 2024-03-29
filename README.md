@@ -70,7 +70,7 @@ afl-fuzz -m 10240 -i fuzzol-seeds -o findings solidity/build-fuzzol/solc/solc @@
 
 For all these three execution, the experimental results are all located in `~/AFLs/findings`, your can change `findings` to other names in the above execution commands.
 
-After collecting mutated test cases inside findings/queue, you can analyze if these test cases can trigger bugs in this benchmark via executing check.py (after some modification).
+After collecting mutated test cases inside findings/queue, you can analyze if these test cases can trigger bugs in this benchmark via executing `check.py` (after some modification).
 
 ## Experimental Results
 
