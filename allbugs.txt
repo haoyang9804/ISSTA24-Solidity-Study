@@ -1,0 +1,13 @@
+bugs/0.8.7/solc-static-linux findings2/queue/id:007936,src:005363,op:arith8,pos:341,val:+6,+cov 11929.sol ('Crash', 'Memory-Related Error')
+bugs/0.4.20/solc-static-linux queue/id:007543,src:000002,op:havoc,rep:32,+cov Bug 3414 -> Semantic Analysis Error
+bugs/0.4.23/solc-static-linux queue/id:016240,src:001848,op:havoc,rep:4 Bug 4051 -> Memory-Related Error
+bugs/0.5.0/solc-static-linux queue/id:012239,src:000271,op:havoc,rep:16 Bug 5501 -> Memory-Related Error
+bugs/0.6.3/solc-static-linux queue/id:007746,src:000002,op:havoc,rep:32,+cov Bug 8368 -> Syntax Analysis Error
+bugs/0.7.5/solc-static-linux queue/id:008964,src:000028,op:havoc,rep:32,+cov Bug 10433 -> Memory-Related Error
+bugs/0.7.5/solc-static-linux queue/id:008964,src:000028,op:havoc,rep:32,+cov 5 Bug 10526 -> Formal Verification Error
+bugs/0.8.0/solc-static-linux queue/id:009963,src:000055,op:havoc,rep:4 Bug 10667 -> Code Generation Error
+bugs/0.8.9/solc-static-linux queue/id:010847,src:000102,op:havoc,rep:32,+cov Bug 12159 -> Memory-Related Error
+bugs/0.6.11/solc-static-linux queue/id:005357,src:001310+004400,op:splice,rep:4,+cov 9506.sol ('Crash', 'Formal Verification Error')
+bugs/0.6.3/solc-static-linux queue/id:004450,src:004400,op:arith8,pos:122,val:+13,+cov 8419.sol ('Crash', 'Formal Verification Error')
+bugs/0.6.5/solc-static-linux queue/id:004450,src:004400,op:arith8,pos:122,val:+13,+cov 8817.sol ('Crash', 'Formal Verification Error')
+bugs/0.7.3/solc-static-linux queue/id:003702,src:002336,op:ext_AO,pos:84,+cov 10058.sol ('Crash', 'Formal Verification Error')
